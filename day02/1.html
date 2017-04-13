@@ -1,0 +1,52 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>选择器</title>
+    <style media="screen">
+      /*标签选择器*/
+      h1{
+        color: blue;
+        font-size: 50px;
+      }
+      /*类选择器*/
+      .color-red{
+        color: red;
+      }
+      /*id选择器*/
+      #font{
+        font-size: 25px;
+      }
+      /*通配选择器*/
+      * {
+          background-color:#9E7A7A;
+      }
+      /*后代选择器*/
+      div h2{
+        color: #20B2AA;
+      }
+      /*交集选择器*/
+      h1 .color-red{
+        color: #7E7A7C;
+        font-size: 25;
+      }
+      /*并集选择器*/
+      h3, span, #font{
+        text-decoration: underline;
+      }
+
+
+    </style>
+  </head>
+  <body>
+<h1>这是h1标签</h1>
+<h2 class="color-red">这是h2标签color-red类</h2>
+<h3 id="font">这是h3标签id为０１</h3>
+<h1>这是h1标签<span class="color-red">带有span标签</span></h1>
+<div>
+  <h2>这是h2标签</h2>嵌套div标签
+</div>
+
+
+</body>
+</html>
