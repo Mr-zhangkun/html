@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>jquery选择器</title>
+</head>
+<a href="asd">链接</a>
+<body>
+  <div class="one" name="helloworld">
+    <div class="two">
+      <div>fafd</div>
+      <p>sdfsfaff</p>
+      <h4>fasffaf</h4>
+      <h5>fasfdddf</h5>
+      <div name="hellonihao">safdaf</div>
+      <div>safdaf</div>
+      <div>safdaf</div>
+    </div>
+    <div name="welop">
+      <h3>sdfjsalkf</h3>
+    </div>
+    <input type="password">
+    <input type="password">
+    <input type="text" name="password" value="">
+  </div>
+  <script src="../js/jquery-3.0.0.min.js">
+    ;
+  </script>
+
+  <script type="text/javascript">
+    console.log($(".one > div")); //子类选择器
+    console.log($(".one p")); //后代选择器
+    $(".one p").css("color", "blue");
+    $("p + h4").css("color", "red"); //相邻兄弟选择器
+
+    $(".two div").eq(3).css("color","red"); //位置选择器
+    $(".two div:odd").css("color","#432342");//奇数选择
+    $(".two div:even").css("color", "#0f0"); //偶数选择
+
+    $("a[href=asd]").css("color","purple"); //属性选择器
+    $("[href=asd]").css("color", "#758588");
+    $("div[name^='hello']").css("color","#549320");
+
+    $(".two div:first-child").css("color","red");//子元素选择器
+    $(".two div:nth-child(3)").css("font-size", "20px");//从１开始计数
+
+    $(":password").val("123"); //表单选择器
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>dom(节点)操作</title>
+    <style media="screen">
+      *{
+        padding:0;
+        margin:0;
+      }
+      .stu{
+        width: 400px;
+        height: 300px;
+        margin:0px auto;
+        border: 1px solid #f00;
+        border-collapse: collapse;
+      }
+      td{
+        border: 1px solid #f00;
+        text-align: center;
+
+      }
+    </style>
+  </head>
+  <body>
+    <div class="one">
+      <table class="stu">
+        <caption>学生信息</caption>
+        <tr>
+          <td>姓名</td>
+          <td>年龄</td>
+          <td>学号</td>
+        </tr>
+        <tr>
+          <td>张三</td>
+          <td>23</td>
+          <td>001</td>
+        </tr>
+      </table>
+
+    </div>
+    <script src="../js/jquery-3.0.0.min.js"></script>
+    <script>
+    //使用$("选择器")选中的元素都是ｊＱｕｅｒｙ对象，是jquery类型
+    // 使用jquery创建一个新元素
+    var  a = $("<tr><td>" + "李四"　+ "</td><td>" + "24" + "</td><td>" + "002" + "</td></tr>");
+  　$(".stu").append(a);  //匹配到的元素插入到目标元素最后面
+    a.appendTo(".stu");
+
+    
+
+
+    </script>
+  </body>
+</html>

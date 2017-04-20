@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>获得元素内容</title>
+  </head>
+  <body>
+    <div>
+      <ul class="one">
+        <li>adsf</li>
+        <li>sfds</li>
+        <li>sdf</li>
+        <li>sdaf</li>
+      </ul>
+    </div>
+    <script src="../js/jquery-3.0.0.min.js"></script>
+    <script>
+    //获得元素内容
+    console.log($(".one li").html());
+    console.log($(".one li").eq(2).html());
+
+    //设置元素内容，覆盖之前的所有内容
+    $(".one li:even").html("<li>ghjkl</li>");
+
+    //获得文本内容
+    console.log($(".one li:odd").text());
+
+    //设置文本内容
+    $(".one li:first").text("<p>不显示Ｐ标签</p>");
+
+
+
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>dom节点操作</title>
+  </head>
+  <body>
+    <ul class="one">
+      <li>asd</li>
+      <li>fgh</li>
+    </ul>
+    <ul class="two">
+      <li>1111</li>
+      <p>ppppppp</p>
+      <li>2222</li>
+      <p>pppppppp</p>
+      <li>3333</li>
+      <li>4444</li>
+    </ul>
+    <script src="../js/jquery-3.0.0.min.js"></script>
+    <script type="text/javascript">
+    //链式调用
+    $(".one li").eq(1).after("<li>1111</li>");　　//插入到选择元素之后
+    $(".two li").eq(3).before("<p>asdfasfd</p>");　//插入到选择元素之前
+
+    //remove删除节点（包括节点本身）
+    $(".two p:nth-child(2)").remove();
+
+    //empty,仅仅删除元素的内容，元素本身不会被删除
+    $(".two li").eq(2).empty();
+
+    </script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>数值类型</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    var a = 10; //十进制
+    var b = 012; //0开头　八进制
+    var c = 0x12; //0x开头　十六进制
+
+/* 浮点类型，　最高精度为17位，　进行算数计算时不如整数准确*/
+    var d = 10.0;
+    var e = 3.5e7;
+    var f = 3.5e-7; //科学计数法
+    var g = 0.1;
+    var h = 0.2;
+    console.log(g + h); //0.300000000000000000004
+
+
+    /*
+    NaN 指本来要返回数值的操作数未返回数值
+    isNaN()函数用来确定该参数是否“不是数值”
+    */
+    alert(isNaN(NaN)); //true
+    alert(isNaN(10));  //false
+    alert(isNaN("hello"));  //true
+    alert(isNaN("10"));  //false
+    alert(isNaN(true));  //false
+
+    /*
+    未定义类型　undefined类型只有一个值undefined
+    */
+    var v;
+    var b = undefined;
+    console.log(v); //undefined
+    console.log(b); //undefined
+
+    /*
+    Null类型也是只有一个值null,表示一个空对象指针
+    */
+    var a = null;
+    console.log(typeof a); // object
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>

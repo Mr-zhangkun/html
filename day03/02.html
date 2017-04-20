@@ -1,0 +1,27 @@
+<!DOCTYPE>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>javascript</title>
+
+  </head>
+  <body>
+  <script>
+  var a = 10;
+  var b = "hello world";
+  if(1){
+    var b = 30;
+  }
+// 局部，全局变量以函数分割
+  function test() {
+    var a = 20;
+    console.log(a);
+    var b = "hello";
+    console.log(b);
+  }
+
+  console.log(a, b);
+  </script>
+  </body>
+</html>

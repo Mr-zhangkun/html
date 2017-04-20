@@ -1,0 +1,23 @@
+<!DOCTYPE>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery选择器</title>
+  </head>
+  <body>
+    <div class="f">class = f</div>
+    <div id="divid">id = divid</div>
+    <div>标签div</div>
+
+    <!--引入jquery文件  -->
+    <script src="../js/jquery-3.0.0.min.js"></script>
+    <script type="text/javascript">
+    console.log($(".f"));
+    $(".f").css("color", "red");
+    $("#divid").css("font-size", "30px");
+    $("div").css("color", "blue");
+
+    </script>
+  </body>
+</html>

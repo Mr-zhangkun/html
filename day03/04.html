@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>字符串类型</title>
+  </head>
+  <body>
+  <script type="text/javascript">
+  var a = "string";
+  var b = "long";
+
+  console.log(a + b); //stringlong
+
+  var a = 10;
+  var b = "string";
+  console.log(a + b); //10string
+
+  var a = 10;
+  console.log("" + a); //10
+
+  console.log(a.toString(2)); //1010
+  console.log(a.toString(8)); //12
+  console.log(a.toString(16)); //a
+
+  var a = false;
+  console.log(a.toString); //function toString()
+
+// String()函数能够将任何类型的值转换成字符串
+  var a = null;
+  console.log(String(a)); //null
+  var a = undefined;
+  console.log(String(a)); //undefined;
+
+
+
+  </script>
+  </body>
+</html>
