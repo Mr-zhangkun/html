@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>360</title>
+  <style media="screen">
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    .clearfix::after,
+    .clearfix::before {
+      content: "";
+      height: 0;
+      display: block;
+      visibility: hidden;
+      line-height: 0;
+      clear: both;
+    }
+
+    body {
+      background-color: #f1f2f6;
+    }
+
+    .head-top {
+      width: 100%;
+      height: 30px;
+      background: #757575;
+    }
+
+    li {
+      list-style: none;
+      float: left;
+    }
+
+    a {
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .head-top-dh {
+      width: 1240px;
+      height: 30px;
+      margin: 0px auto;
+    }
+
+    .head-top a{
+      font-size: 12px;
+      line-height: 30px;
+      color: #fff;
+      /*float: left;*/
+      padding: 0px 5px;
+    }
+
+    .fenge-fu {
+      font-size: 12px;
+      line-height: 30px;
+      color: #fff;
+      margin: 0px 2px;
+    }
+
+    .head-mid {
+      width: 100%;
+      height: 80px;
+      background: white;
+      background-image: url("https://b1.qikucdn.com/dfsj_imgs/indeximg/qiku_community_logo.png?Mqi}");
+      background-position: 140px 17px;
+      background-repeat: no-repeat;
+    }
+
+    .logo {
+      margin-left: 143px;
+      margin-top: 20px;
+    }
+
+    .head-mid-dh {
+      margin-left: 490px;
+    }
+
+    .head-mid1 a {
+      font-size: 16px;
+      color: #5c5c5c;
+      line-height: 80px;
+      margin-left: 15px;
+    }
+
+    .head-mid1 a:hover {
+      color: rgb(46, 199, 187)
+    }
+
+    .head-mind1-one:visited {
+      color: rgb(46, 199, 187);
+    }
+
+    input {
+      width: 200px;
+      height: 30px;
+      border: 1px solid #ccc;
+      margin-left: 50px;
+      margin-right: 80px;
+    }
+    /*.body-tu{
+      position: absolute;
+    }*/
+
+    .tu-1 {
+      display: none;
+    }
+
+    .tu-2 {
+      display: block;
+    }
+
+    .tu-11 {
+      float: left;
+      z-index: 3;
+      position: absolute;
+      top: 278px;
+    }
+
+    .tu-12 {
+      float: right;
+      z-index: 3;
+      position: absolute;
+      ;
+      top: 277px;
+      left: 1281px;
+    }
+
+    .body {
+      width: 1240px;
+      height: 3567px;
+      margin: 10px auto;
+    }
+
+    .body-text-left {
+      width: 925px;
+      height: 3098px;
+      background: white;
+      margin-top: 20px;
+      float: left;
+    }
+
+    .body-text-left1 {
+      width: 835px;
+      height: 300px;
+      margin: 0px auto;
+      border-bottom: 1px solid #ececec;
+    }
+
+    .body-text-left11 {
+      margin-top: 45px;
+      margin-right: 30px;
+      float: left;
+    }
+
+    .body-text-left12 {
+      width: 525px;
+      margin: 50px 0px;
+      float: left;
+    }
+
+    p {
+      color: #5c5c5c;
+    }
+
+    h3 a:visited {
+      color: #5c5c5c;
+    }
+
+    .foot,
+    span {
+      font-size: 12px;
+      color: #6f6f6f;
+      margin-left: 3px;
+      margin-right: 3px;
+    }
+
+    .body-text-right {
+      width: 280px;
+      height: 2126px;
+      margin-left: 10px;
+      margin-top: 20px;
+      float: right;
+      background: #fff;
+      padding: 12px;
+    }
+
+    .body-text-right1 {
+      width: 278px;
+      height: 80px;
+      line-height: 80px;
+      text-align: center;
+      color: white;
+      font-size: 34px;
+      background-color: rgb(46, 199, 187);
+      margin-bottom: 15px;
+    }
+
+    .body-text-right2 {
+      width: 135px;
+      height: 83px;
+      background-color: rgb(46, 199, 187);
+      text-align: center;
+      padding: 10px 0px;
+      float: left;
+    }
+
+    #r21 {
+      font-size: 16px;
+      color: white;
+    }
+
+    #r22 {
+      font-size: 26px;
+      color: white;
+    }
+
+    #r23 {
+      font-size: 12px;
+      color: white;
+    }
+
+    #r31 {
+      width: 123px;
+      height: 43px;
+      border: 2px solid rgb(46, 199, 187);
+      float: right;
+      margin-bottom: 7px;
+      font-size: 20px;
+      line-height: 43px;
+      color: #2ec7bb;
+      text-align: center;
+    }
+    h4{
+      font-size: 14px;
+      color: #3c3c3c;
+      font-weight: normal;
+    }
+
+    .body-text-right3 {
+      width: 273px;
+      height: 136px;
+      margin-bottom: 30px;
+    }
+    .right4{
+      width: 260px;
+      height: 190px;
+      margin: 55px auto;
+    }
+    .right7{
+      width: 260px;
+      height: 284px;
+    }
+    .right5{
+      width:260px;
+      height: 170px;
+      margin: 60px auto;
+    }
+    .right6{
+      width: 260px;
+      height: 202px;
+      /*background: red;*/
+      margin:35px auto;
+    }
+    .right61{
+      width: 85px;
+      height: 27px;
+      float: left;
+      margin-left: 46px;
+    }
+    .right62{
+      width: 50px;
+      height: 27px;
+      float: left;
+    }
+    .right63, .right64{
+      width: 258px;
+      height: 145px;
+      color: #fff ;
+      position: relative;
+      top: 26px;
+      border-top: 1px solid #ececec;
+      /*margin-bottom: 30px;*/
+    }
+    .right65, .right66{
+      width: 90px;
+      height: 32px;
+      line-height: 32px;
+      text-align: center;
+      float: left;
+      background-color: #2ec7bb;
+      margin: 50px 20px;
+    }
+    .right8{
+      width: 260px;
+      height: 250px;
+      margin:5px auto;
+    }
+    .right81{
+      width: 260px;
+      height: 240px;
+      margin-top: 10px;
+      border-top: 1px solid #ececec;
+
+    }
+    .right31{
+      width: 260px;
+      height: 163px;
+      border-top: 1px solid #ececec;
+      padding-top: 10px;
+    }
+    .right32{
+
+    }
+    .body-text-right4{
+      width: 260px;
+      height: 170px;
+      margin-bottom: 30px;
+    }
+
+
+
+    .share1 {
+      width: 19px;
+      height: 19px;
+      float: right;
+    }
+
+    .share2 {
+      width: 202px;
+      height: 34px;
+      border: 1px solid #ececec;
+      position: relative;
+      top:32px;
+      left: 47px;
+    }
+
+    .share3 {
+      float: right;
+    }
+    .button{
+      width: 640px;
+      height: 32px;
+      float: left;
+      margin:25px 140px;
+    }
+    .button1{
+      width: 32px;
+      height:32px;
+      color: #6f6f6f;
+      font-size: 14px;
+      line-height: 32px;
+      text-align: center;
+      float: left;
+
+    }
+    #ye{
+      background-color:#2ec7bb;
+    }
+    .last{
+      width: 100%;
+      height: 174px;
+      background: #fff;
+      padding-top: 20px;
+    }
+    .last-1{
+      width: 918px;
+      height: 70px;
+      margin: 20px auto;
+      text-align: center;
+    }
+
+
+  </style>
+</head>
+
+<body>
+  <div class="head-top">
+    <ul class="head-top-dh">
+      <li class="head-top1"><a href="#">360官网</a><span class="fenge-fu">|</span></li>
+
+      <li class="head-top1"><a href="#">360商城</a><span class="fenge-fu">|</span></li>
+      <li class="head-top1"><a href="#">360手机官网 </a><span class="fenge-fu">|</span></li>
+      <li class="head-top1"><a href="#">社区客户端</a></li>
+    </ul>
+  </div>
+  <div class="head-mid">
+    <!-- <img class="logo"src="https://b1.qikucdn.com/dfsj_imgs/indeximg/qiku_community_logo.png?Mqi}" alt=""> -->
+    <ul class="head-mid-dh">
+      <li class="head-mid1"><a class="head-mind1-one" href="#">推荐</a></li>
+      <li class="head-mid1"><a href="#">论坛</a></li>
+      <li class="head-mid1"><a href="#">板块</a></li>
+      <li class="head-mid1"><a href="#">同城</a></li>
+      <li class="head-mid1"><a href="#">好奇者试用</a></li>
+      <li class="head-mid1"><a href="#">精彩活动</a></li>
+      <li class="head-mid1"><a href="#">专题</a></li>
+      <li class="head-mid1">
+        <a href="#"><input class="head-mid2" type="text" value="帖子/用户" style="color:#ccc"></a>
+      </li>
+      <li class="head-mid1">
+        <a href="#">
+          <butto></butto>
+        </a>
+      </li>
+
+      <li class="head-mid1"><a href="#">登录</a></li>
+      <li class="head-mid1"><a class="head-mind1-one" href="#">注册</a></li>
+    </ul>
+  </div>
+  <div class="body">
+    <div class="body-tu">
+      <div class="tu-1"><img class="tu-11" src="https://b1.qikucdn.com/dfsj_imgs/indeximg/index_pre.png" alt=""></div>
+      <img src="http://p0.qhmsg.com/t01a9e519700fc985c2.jpg" alt="">
+      <div class="tu-1"><img class="tu-12" src="https://b1.qikucdn.com/dfsj_imgs/indeximg/index_next.png"></div>
+    </div>
+    <div class="body-text">
+      <dl class="body-text-left">
+        <dd class="body-text-left1">
+          <div class="body-text-left11">
+            <img src="http://p0.qhmsg.com/t010add741be0452d60.png" alt="">
+          </div>
+          <div class="body-text-left12">
+            <h3 class="left121"><a href="#">老周做客《焦点访谈》：网络安全攻防战该怎么打?</a></h3>
+            <br>
+            <p class="left122">近期央视《焦点访谈》栏目再度聚焦网络信息安全，并对国家层面的网络安全进行了解读，360公司董事长周鸿祎也应邀在节目中发表了自己的看法<a href="#" style="color: rgb(46, 199, 187)">　全文》</a></p>
+            <br>
+            <span class="share"><a class="foot"href="#">粉丝杂谈</a> 2017-04-20 | 鴻鴈</span>
+
+            <div class="share3">
+              <img class="share1" src="https://b1.qikucdn.com/dfsj_imgs/index/share_1.png">
+              <img class="share2 tu-1" src="http://b1.qikucdn.com/dfsj_imgs/indeximg/shares.png">
+            </div>
+
+
+          </div>
+        </dd>
+        <dd class="body-text-left1">
+          <div class="body-text-left11">
+            <img src="http://p0.qhmsg.com/t013e761b50fa571d01.png" alt="">
+          </div>
+          <div class="body-text-left12">
+            <h3 class="left121"><a href="#">从中专肄业生到怪才黑客，这个95后中国小伙......</a></h3>
+            <br>
+            <p class="left122">4月16日，Hack in the Box安全会议,在荷兰阿姆斯特丹落下了帷幕，来自中国360互联网安全创新中心的“黑客”军团,共带来了5项前沿议题的演讲，其中来自360独角兽团队的不满20岁小黑客曾颖涛，赢得专家们赞赏，这也是这个欧洲顶级安全会议,迎来的最年轻演讲者。<a href="#" style="color: rgb(46, 199, 187)">　全文》</a></p>
+            <br>
+            <span class="share"><a class="foot"href="#">粉丝杂谈</a> 2017-04-18 | 鴻鴈</span>
+            <div class="share3">
+              <img class="share1" src="https://b1.qikucdn.com/dfsj_imgs/index/share_1.png">
+              <img class="share2 tu-1" src="http://b1.qikucdn.com/dfsj_imgs/indeximg/shares.png">
+            </div>
+          </div>
+        </dd>
+        <dd class="body-text-left1">
+          <div class="body-text-left11">
+            <img src="http://i1.piimg.com/1949/6df06ee8536031dc.png" alt="">
+          </div>
+          <div class="body-text-left12">
+            <h3 class="left121"><a href="#">《速度与激动8》里吊炸天的黑科技真实现了！</a></h3>
+            <br>
+            <p class="left122">只要一提起《速度与激情》，就会想起让人直呼“好爽”的飙车，紧凑刺激的剧情，夺人眼球的豪车美女。当然还有那些记忆深刻的——神出鬼没、突破想象的：黑科技<a href="#" style="color: rgb(46, 199, 187)">　全文》</a></p>
+            <br>
+            <span class="share"><a class="foot"href="#">360动态</a> 2017-04-17 | 飞机飞行</span>
+            <div class="share3">
+              <img class="share1" src="https://b1.qikucdn.com/dfsj_imgs/index/share_1.png">
+              <img class="share2 tu-1" src="http://b1.qikucdn.com/dfsj_imgs/indeximg/shares.png">
+            </div>
+          </div>
+        </dd>
+        <dd class="body-text-left1">
+          <div class="body-text-left11">
+            <img src="http://p0.qhmsg.com/t0195136d91c0587590.png" alt="">
+          </div>
+          <div class="body-text-left12">
+            <h3 class="left121"><a href="#">唐僧和女儿国国王闷闷不乐，竟是因为 ... ...</a></h3>
+            <br>
+            <p class="left122">#唐僧被抓记# 唐长老怎么经常愁眉苦脸？女儿国国王又为何总闷闷不乐 能让他们畅快淋漓的还得靠……戳进了你就知道~~360产品四格漫画10th 一起来看！（本期依旧有奖）<a href="#" style="color: rgb(46, 199, 187)">　全文》</a></p>
+            <br>
+            <span class="share"><a class="foot"href="#">粉丝杂谈</a>2017-04-17 | 王光明</span>
+            <div class="share3">
+              <img class="share1" src="https://b1.qikucdn.com/dfsj_imgs/index/share_1.png">
+              <img class="share2 tu-1" src="http://b1.qikucdn.com/dfsj_imgs/indeximg/shares.png">
+            </div>
+          </div>
+        </dd>
+        <dd class="body-text-left1">
+          <div class="body-text-left11">
+            <img src="http://p0.qhmsg.com/t0170bf4e7f7736a183.png" alt="">
+          </div>
+          <div class="body-text-left12">
+            <h3 class="left121"><a href="#">【有妹子】山东职业学院带你领跑校园新生活</a></h3>
+            <br>
+            <p class="left122">360校园俱乐部走进山东职业学院，现场超级火爆，超多萌妹子！各种游戏环节乐翻天！赶快来一起看看吧！<a href="#" style="color: rgb(46, 199, 187)">　全文》</a></p>
+            <br>
+            <span class="share"><a class="foot"href="#">360校园</a>2017-04-14 | 田正凯</span>
+            <div class="share3">
+              <img class="share1" src="https://b1.qikucdn.com/dfsj_imgs/index/share_1.png">
+              <img class="share2 tu-1" src="http://b1.qikucdn.com/dfsj_imgs/indeximg/shares.png">
+            </div>
+          </div>
+        </dd>
+        <dd class="body-text-left1">
+          <div class="body-text-left11">
+            <img src="http://i1.piimg.com/1949/1a46653552d76007.png" alt="">
+          </div>
+          <div class="body-text-left12">
+            <h3 class="left121"><a href="#">只有高大上的食堂算神马？配备这些的公司才是好公司！</a></h3>
+            <br>
+            <p class="left122">又到了一年招聘热季。 按照惯例，我们总是要展示一下公司的软硬实力， 福利以及伙伴们的战斗力。 之前发过了食堂篇，早饭中饭晚饭下午茶以及各种好吃的<a href="#" style="color: rgb(46, 199, 187)">　全文》</a></p>
+            <br>
+            <span class="share"><a class="foot"href="#">粉丝杂谈</a> 2017-04-13 | 鴻鴈</span>
+            <div class="share3">
+              <img class="share1" src="https://b1.qikucdn.com/dfsj_imgs/index/share_1.png">
+              <img class="share2 tu-1" src="http://b1.qikucdn.com/dfsj_imgs/indeximg/shares.png">
+            </div>
+          </div>
+        </dd>
+        <dd class="body-text-left1">
+          <div class="body-text-left11">
+            <img src="http://p0.qhmsg.com/t0100b85fd577665d1f.png" alt="">
+          </div>
+          <div class="body-text-left12">
+            <h3 class="left121"><a href="#">最美四月，美女带你领跑校园新生活【360济南校园俱乐部】?</a></h3>
+            <br>
+            <p class="left122">你是人间四月天，360带你领跑校园新生活， 下午6点整，学院的社团指导老师宣布活动开始并欢迎济南大学360校园俱乐部作为新社团加入了社团大家庭。不出意外的，因为我们的活动因为奖品丰厚，工作人员漂亮帅气。成功的吸引到了众多的围观，很多同学参与进来。<a href="#" style="color: rgb(46, 199, 187)">　全文》</a></p>
+            <br>
+            <span class="share"><a class="foot"href="#">360校园</a>2017-04-13 | free卡尔萨斯</span>
+            <div class="share3">
+              <img class="share1" src="https://b1.qikucdn.com/dfsj_imgs/index/share_1.png">
+              <img class="share2 tu-1" src="http://b1.qikucdn.com/dfsj_imgs/indeximg/shares.png">
+            </div>
+          </div>
+        </dd>
+        <dd class="body-text-left1">
+          <div class="body-text-left11">
+            <img src="http://p0.qhmsg.com/t01fd62e7c3eedb1495.png" alt="">
+          </div>
+          <div class="body-text-left12">
+            <h3 class="left121"><a href="#">白百何出轨、冒充达康书记…… 这届骗子还真是拼了！</a></h3>
+            <br>
+            <p class="left122">不管你有没有一颗八卦的心，今天，不知道某白姓女星出轨的爆料，一定是你没手机没电脑还没朋友。 据说画面满满的都是尴尬，小鲜肉在泳池边“异军突起”，白姓女星“指点江山”。<a href="#" style="color: rgb(46, 199, 187)">　全文》</a></p>
+            <br>
+            <span class="share"><a class="foot"href="#">粉丝杂谈</a> 2017-04-12 | 鴻鴈</span>
+            <div class="share3">
+              <img class="share1" src="https://b1.qikucdn.com/dfsj_imgs/index/share_1.png">
+              <img class="share2 tu-1" src="http://b1.qikucdn.com/dfsj_imgs/indeximg/shares.png">
+            </div>
+          </div>
+        </dd>
+        <dd class="body-text-left1">
+          <div class="body-text-left11">
+            <img src="http://p0.qhmsg.com/t01ca194d98b4b300f1.png" alt="">
+          </div>
+          <div class="body-text-left12">
+            <h3 class="left121"><a href="#">周鸿祎为什么安排女同事和特种兵对打?</a></h3>
+            <br>
+            <p class="left122">老周在创业黑马的“创业实验室”第一期在3月份正式结业，最后一次实验室课堂上，老周与学员们交流分享了领导力、团队、创业者、企业模型以及竞争等五个话题。老周认为，勇气是领导力的核心。之所以要谈勇气，是因为领导力最早是从军队里出来的。<a href="#" style="color: rgb(46, 199, 187)">　全文》</a></p>
+            <br>
+            <span class="share"><a class="foot"href="#">360动态</a>2017-04-12 | 王光明</span>
+            <div class="share3">
+              <img class="share1" src="https://b1.qikucdn.com/dfsj_imgs/index/share_1.png">
+              <img class="share2 tu-1" src="http://b1.qikucdn.com/dfsj_imgs/indeximg/shares.png">
+            </div>
+          </div>
+        </dd>
+        <dd class="body-text-left1">
+          <div class="body-text-left11">
+            <img src="http://p0.qhmsg.com/t015d2601ad53a34f74.png" alt="">
+          </div>
+          <div class="body-text-left12">
+            <h3 class="left121"><a href="#">360儿童手表SE 2 Plus实物拍摄 表带看起来很好吃</a></h3>
+            <br>
+            <p class="left122">360儿童手表SE 2 Plus即将于4月18日发售，手表节目的UI和高端的5S版本看起来类似，表带采用糖果色系，粉色版本命名为珊瑚粉，表带质地看起来也与布丁类似。蓝色版本命名为松石蓝。<a href="#" style="color: rgb(46, 199, 187)">　全文》</a></p>
+            <br>
+            <span class="share"><a class="foot"href="#">粉丝杂谈</a> 2017-04-12 | 鴻鴈</span>
+            <div class="share3">
+              <img class="share1" src="https://b1.qikucdn.com/dfsj_imgs/index/share_1.png">
+              <img class="share2 tu-1" src="http://b1.qikucdn.com/dfsj_imgs/indeximg/shares.png">
+            </div>
+          </div>
+        </dd>
+        <div class="button">
+          <div class="button1" id="ye">1</div>
+          <div class="button1">2</div>
+          <div class="button1">3</div>
+          <div class="button1">4</div>
+          <div class="button1">5</div>
+          <div class="button1">6</div>
+          <div class="button1">7</div>
+          <div class="button1">8</div>
+          <div class="button1">9</div>
+          <div class="button1">10</div>
+          <div class="button1">11</div>
+          <div class="button1">12</div>
+          <div class="button1">13</div>
+          <div class="button1">14</div>
+          <div class="button1">15</div>
+          <div class="button1">16</div>
+          <div class="button1">17</div>
+          <div class="button1">18</div>
+          <div class="button1">19</div>
+          <div class="button1">20</div>
+
+        </div>
+      </dl>
+
+      <div class="body-text-right">
+        <div class="body-text-right1">发帖</div>
+        <div class="body-text-right2"><span id="r21">星期六</span><br><br><span id="r22">4.22</span><br><span id="r23">已签到5959人</span></div>
+        <div class="body-text-right3">
+          <div id="r31">签到</div>
+          <div id="r31">抽奖</div>
+        </div>
+        <div class="body-text-right4">
+          <h4>板块推荐</h4>
+          <div class="right31">
+          <img width="260" height="163"src="http://i4.buimg.com/1949/3b718d8da87dd096.png">
+          </div>
+        </div>
+        <div class="right3">
+          <h4>360手机N5发布会全程实录</h4>
+          <div class="right31">
+            <img width="260" height="200"src="./选区_008.png">
+          </div>
+        </div>
+        <div class="right4">
+          <h4>最新活动</h4>
+          <div class="right31">
+            <img width="270" height="152"src="http://p0.qhmsg.com/t01d78cfc295e934ed0.jpg" alt="">
+          </div>
+        </div>
+        <div class="right7">
+          <h4>热门推荐</h4>
+          <ul class="right31">
+            <li><a style="line-height:30px" href="#" class="foot">唐僧和女儿国国王闷闷不乐，竟是因为 ... .</a></li>
+            <li><a style="line-height:30px"href="#" class="foot">厉害了word 360！《速度与激动8》里吊炸天 </a></li>
+            <li><a style="line-height:30px"href="#" class="foot">【有妹子】山东职业学院360校园俱乐部带你</a></li>
+            <li><a style="line-height:30px"href="#" class="foot">【360的名义】只有高大上的食堂算神马？配</a></li>
+            <li><a style="line-height:30px"href="#" class="foot">【有美女】最美四月，360济南校园俱乐部带</a></li>
+            <li><a style="line-height:30px"href="#" class="foot">白百何出轨、冒充达康书记…… 这届骗子还</a></li>
+            <li><a style="line-height:30px"href="#" class="foot">周鸿祎为什么安排女同事和特种兵对打？</a></li>
+            <li><a style="line-height:30px"href="#" class="foot">360儿童手表SE 2 Plus实物拍摄 表带看起来</a></li>
+          </ul>
+        </div>
+        <div class="right6">
+          <h4 style="float:left">360 OS 版本</h4>
+          <div class="right61">
+          <p>稳定版</p>
+          </div>
+          <div class="right62">
+          <p>公测版</p>
+          </div>
+          <div class="right63">
+            <p class="foot">360手机N4S V050</p>
+            <br>
+            <p class="foot">更新时间：2017年2月7日</p><br>
+            <p class="foot">更新推荐：新增魔球功能，优化相机功耗占用，私密系统找回密码流程等</p>
+          </div>
+          <div class="right64 tu-1">
+            <p class="foot">旗舰版018</p><br>
+            <p class="foot">更新时间：2017年1月23日</p><br>
+            <p class="foot">更新推荐：蓝牙的待机功耗，锁屏防误触模式，财产系统的界面绘制等</p>
+          </div>
+          <div class="right65"><p style="color: #fff">下载rom</p></div>
+          <div class="right66" style="background-color:#c9c9c9"><p style="color: #fff">刷机教程</p></div>
+        </div>
+        <div class="right8">
+          <h4>明星用户</h4>
+          <div class="right81">
+            <img width="255px" height="215px"src="./选区_009.png" alt="">
+
+          </div>
+        </div>
+        <div class="right5">
+          <h4>360社区客户端下载</h4>
+          <div class="right31">
+            <img src="https://b1.qikucdn.com/dfsj_imgs/qikubbs_download.png?v=1.0" alt="">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+  <div class="last">
+    <ul class="last-1">
+
+      <li class=""><a class="foot" href="#">360官网</a><span> | </span></li>
+
+      <li class=""><a class="foot" href="#">360商城</a><span> | </span></li>
+      <li class=""><a class="foot" href="#">360官网</a><span> | </span></li>
+      <li class=""><a class="foot" href="#">360手机官网</a><span> | </span></li>
+      <li class=""><a class="foot" href="#">好奇者试用</a><span> | </span></li>
+      <li class=""><a class="foot" href="#">手机中国论坛</a><span> | </span></li>
+      <li class=""><a class="foot" href="#">太平洋手机论坛</a><span> | </span></li>
+      <li class=""><a class="foot" href="#">手机之家论坛</a><span> | </span></li>
+      <li class=""><a class="foot" href="#">雷锋网</a><span> | </span></li>
+      <li class=""><a class="foot" href="#">爱搞机</a><span> | </span></li>
+      <li class=""><a class="foot" href="#">必虎社区</a><span> | </span></li>
+      <li class=""><a class="foot" href="#">安卓论坛</a><span> | </span></li>
+      <li class=""><a class="foot" href="#">硬糖社区</a></li>
+      <span> | </span><a class="foot" href="#">申请加入</a><br><br>
+      <a href="#" class="foot">社区合作</a><span> | </span>
+      <a href="#" class="foot">小黑屋</a><span> | </span>
+      <a href="#" class="foot">Archiver</a><span> | </span>
+      <span>备案证号：京ICP备08010314号-6  Copyright©2005-2017 360.com 版权所有 360互联网安全中心</span>
+
+    </ul>
+
+  </div>
+  <script src="./js/jquery-3.0.0.min.js"></script>
+  <script type="text/javascript">
+    $(".body-tu").hover(function() {
+      $(this).find(".tu-1").addClass("tu-2");
+    }, function() {
+      $(this).find(".tu-1").removeClass("tu-2");
+    });
+
+    $(".share3").hover(function() {
+      $(this).find(".share2").addClass("tu-2");
+    }, function() {
+      $(this).find(".share2").removeClass("tu-2");
+    });
+    $(".right62").click(function(){
+      $(".right63").addClass("tu-1"),
+      $(".right64").removeClass("tu-1")
+    });
+    $(".right61").click(function(){
+      $(".right64").addClass("tu-1"),
+      $(".right63").removeClass("tu-1")
+    });
+
+
+  </script>
+</body>
+
+</html>
