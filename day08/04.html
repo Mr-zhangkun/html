@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>镜子</title>
+    <style media="screen">
+      *{
+        padding:0;
+        margin:0;
+      }
+
+      img{
+        position: absolute;
+        top: 100px;
+        left: 400px;
+      }
+      img:nth-child(2){
+        transform-origin: bottom;
+        transition: all 2s ease;
+      }
+      html:hover img:nth-child(2){
+        transform: rotate3d(1,0,0,180deg);
+      }
+    </style>
+  </head>
+  <body>
+      <img src="./image/musict.jpg" alt="">
+      <img src="./image/musicb.jpg" alt="">
+  </body>
+</html>

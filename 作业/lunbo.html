@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>轮播图</title>
+  <style media="screen">
+    * {
+      padding: 0;
+      margin:0;
+    }
+
+    .banner {
+      position: relative;
+      overflow: auto;
+      text-align: center;
+      margin: 300px auto;
+    }
+
+    .banner li {
+      list-style: none;
+    }
+
+    .banner ul li {
+      float: left;
+    }
+
+    #one {
+      width: 640px;
+    }
+
+    #one .dots {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 20px;
+    }
+
+    #one .dots li {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin: 0 4px;
+      text-indent: -999em;
+      border: 2px solid #fff;
+      border-radius: 6px;
+      cursor: pointer;
+      opacity: .4;
+      -webkit-transition: background .5s, opacity .5s;
+      -moz-transition: background .5s, opacity .5s;
+      transition: background .5s, opacity .5s;
+    }
+
+    #one .dots li.active {
+      background: #fff;
+      opacity: 1;
+    }
+
+    #one .arrow {
+      position: absolute;
+      top: 200px;
+    }
+
+    #one #al {
+      left: 0px;
+    }
+
+    #one #ar {
+      right: 0px;
+    }
+  </style>
+  </style>
+</head>
+
+<body>
+  <div class="banner" id="one">
+    <ul>
+      <li><img src="./image/1.jpg" alt="" width="1226" height="460"></li>
+      <li><img src="./image/2.jpg" alt="" width="1226" height="460"></li>
+      <li><img src="./image/3.jpg" alt="" width="1226" height="460"></li>
+      <li><img src="./image/4.jpg" alt="" width="1226" height="460"></li>
+      <li><img src="./image/0.jpg" alt="" width="1226" height="460"></li>
+    </ul>
+    <a href="javascript:void(0);" class="unslider-arrow prev"><img class="arrow" id="al" src="https://b1.qikucdn.com/dfsj_imgs/indeximg/index_pre.png" alt="prev" width="70" height="70"></a>
+    <a href="javascript:void(0);" class="unslider-arrow next"><img class="arrow" id="ar" src="https://b1.qikucdn.com/dfsj_imgs/indeximg/index_next.png" alt="next" width="70" height="70"></a>
+  </div>
+  <script src="./js/jquery-3.0.0.min.js"></script>
+  <script src="./js/unslider.min.js"></script>
+  <script>
+    $(document).ready(function(e) {
+      var unslider = $('#one').unslider({
+          dots: true,
+          delay: 2000,
+          pause:false,
+          animation: 'vertical',
+          autoplay: true,
+          infinite: true,
+        }),
+        data = unslider.data('unslider');
+      $('.unslider-arrow').click(function() {
+        var fn = this.className.split(' ')[1];
+        data[fn]();
+      });
+
+    });
+  </script>
+
+
+</body>
+
+</html>

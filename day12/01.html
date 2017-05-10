@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,  initial-scale=1.0,maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+
+  <title>响应式导航</title>
+  <style media="screen">
+    .my-top {
+      background: #cf4646;
+    }
+    /*.my-top .container{
+      height: 300px;
+    }*/
+
+    .my-navbar {
+      background:#cf4646 ;
+      border: none;
+    }
+
+    .navbar-default .navbar-nav>li>a,
+    .navbar-default .navbar-brand {
+      color: #e8e8e8;
+    }
+
+    .jvmu {
+      background: #cf4646;
+    }
+
+    .jvmu p {
+      color: #fff;
+    }
+    .jvmu .btn-primary{
+      color: #ccc;
+      background-color: transparent;
+      border: 1px solid #ccc;
+      box-shadow: inset 0 0 0 1px #ccc;
+      border-radius: 0px;
+    }
+    .jvmu .btn-primary:hover{
+      color: #fff;
+      border: 1px solid #fff;
+      box-shadow: inset 0 0 0 1px #fff;
+    }
+    .my-row{
+      height: 143px;
+    }
+    .my-row p{
+      font-size: 18px;
+    }
+    .my-foot p{
+      color: #aaa;
+    }
+  </style>
+</head>
+
+<body>
+      <div class="navbar navbar-default navbar-fixed-top my-navbar">
+  <div class="container my-top">
+
+
+        <div class="navbar-header">
+          <a href="#" class="navbar-brand">Gulp中文网</a>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#shownav">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+        </div>
+
+        <ul class="nav navbar-nav collapse navbar-collapse navbar-right" id="shownav">
+          <li><a href="#">首页</a></li>
+          <li><a href="#">中文文档</a></li>
+          <li><a href="#">入门指南</a></li>
+          <li><a href="#">API</a></li>
+          <li><a href="#">插件开发</a></li>
+          <li><a href="#">常见问题</a></li>
+          <li><a href="#">使用技巧</a></li>
+        </ul>
+  </div>
+      </div>
+
+  <div class="jumbotron text-center jvmu">
+    <h1><img src="http://www.gulpjs.com.cn/img/gulp-white-text.svg" alt=""></h1>
+    <p>用自动化构建工具增强你的工作流程！</p>
+    <p><a class="btn btn-primary btn-lg" href="#" role="button">开始使用</a></p>
+  </div>
+
+  <div class="container">
+    <div class="row my-row">
+      <div class="col-md-6 col-sm-12 col-xs-12"><h2>易于使用</h2>
+      <p>通过代码优于配置的策略，Gulp 让简单的任务简单，复杂的任务可管理。</p>
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-12"><h2>构建快速</h2>
+      <p>利用 Node.js 流的威力，你可以快速构建项目并减少频繁的 IO 操作。</p>
+      </div>
+    </div>
+    <div class="row my-row">
+      <div class="col-md-6 col-sm-12 col-xs-12"><h2>插件高质</h2>
+      <p>Gulp 严格的插件指南确保插件如你期望的那样简洁高质得工作。</p>
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-12"><h2>易于学习</h2>
+      <p>通过最少的 API，掌握 Gulp 毫不费力，构建工作尽在掌握：如同一系列流管道。</p>
+      </div>
+    </div>
+    <div class="my-foot text-center">
+      <p>© Gulp 中文网 2015</p>
+      <p>京ICP备11008151号 | 京公网安备11010802014853</p>
+    </div>
+  </div>
+
+  <script src="./js/jquery-3.0.0.js"></script>
+  <script src="./bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+  </script>
+</body>
+
+</html>

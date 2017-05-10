@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>作业２</title>
+  <style media="screen">
+    /**{
+      padding:0;
+      margin: 0;
+
+    }*/
+
+    .head {
+      width: 1463px;
+      height: 110px;
+    }
+
+    .head-top {
+      width: 1210px;
+      height: 76px;
+      margin: 0px auto;
+    }
+
+    .head-top-logo {
+      width: 165px;
+      height: 76px;
+      margin-top: -12px;
+      background-image: url("https://misc.360buyimg.com/user/reg/1.0.0/css/i/icon.png");
+      background-repeat: no-repeat;
+      background-position: 0px 30px;
+      float: left;
+    }
+
+    .head-text {
+      font-size: 24px;
+      color: #333;
+      margin-left: 30px;
+      margin-top: 27px;
+      float: left;
+    }
+
+    .head-text1,
+    .head-text2 {
+      font-size: 16px;
+      float: right;
+      color: #999;
+      margin-top: 43px;
+      margin-right: 7px;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .head-foot {
+      width: 100%;
+      height: 10px;
+      margin-top: 16px;
+      background-image: url("https://misc.360buyimg.com/user/reg/1.0.0/css/i/headbg.jpg");
+    }
+
+    .body {
+      width: 1210px;
+      height: 622px;
+      margin: 40px auto;
+      /*border-bottom: 1px solid #c5c5c5;*/
+    }
+
+    .body-1 {
+      width: 830px;
+      height: 622px;
+      margin: 0px auto;
+    }
+
+    .body-2 {
+      width: 400px;
+      height: 622px;
+      /*margin:0px auto;*/
+      float: left;
+    }
+
+    .body-3 {
+      width: 400px;
+      height: 54px;
+      border: 1px solid #c5c5c5;
+      float: left;
+    }
+
+    .body-31 {
+      width: 90px;
+      height: 52px;
+      font-size: 14px;
+      color: #666;
+      line-height: 52px;
+      text-align: center;
+      padding: 4px 30px 4px 20px;
+      float: left;
+    }
+    select{
+      width: 100px;
+      height: 40px;
+      font-size: 14px;
+      color: #666;
+      border: none;
+      background-color: #fff;
+    }
+    .jltu{
+      width: 18px;
+      height: 18px;
+      background-image: url("https://misc.360buyimg.com/user/reg/1.0.0/css/i/icon.png");
+      /*background-color: red;*/
+      background-repeat: no-repeat;
+      background-position: 1px -98px;
+      margin-top:5px;
+      float: left;
+    }
+
+    input {
+      width: 210px;
+      height: 19px;
+      margin-top: 19px;
+      border: none;
+      outline: medium;
+    }
+
+    .text {
+      width: 400px;
+      height: 30px;
+      font-size: 12px;
+      color: #5c5c5c;
+      line-height: 30px;
+      float: left;
+      padding-left: 30px;
+      /*visibility: hidden;*/
+      display: none;
+    }
+    /*.xian{
+      visibility: visible;
+    }*/
+
+    .body-foot {
+      width: 375px;
+      height: 25px;
+      font-size: 12px;
+      color: #333;
+      float: left;
+      margin-top: 36px;
+      line-height: 25px;
+    }
+
+    #chack {
+      width: 18px;
+      height: 18px;
+      margin-top: 38px;
+      float: left;
+    }
+    .ma{
+      width: 110px;
+      height: 46px;
+      border: none;
+      background-color: #f2f2f2;
+      font-size: 13px;
+      float: left;
+      position: relative;
+      top: -36px;
+      left: 150px;
+    }
+
+    .sub {
+      width: 400px;
+      height: 53px;
+      font-size: 16px;
+      color: #fff;
+      border: none;
+      background-color: #e22;
+      margin-top: 23px;
+    }
+    .body-4{
+      width: 190px;
+      height: 605px;
+      border-left: 1px solid #c5c5c5;
+      margin-left: 104px;
+      padding-left: 90px;
+      float: left;
+    }
+    .qiye{
+      width: 160px;
+      height: 67px;
+      margin-left: 30px;
+      border-bottom: 1px solid #ddd;
+    }
+    .qi1{
+      width: 34px;
+      height: 34px;
+      /*background-color: red;*/
+      background-image: url("https://misc.360buyimg.com/user/reg/1.0.0/css/i/icon.png");
+      background-repeat: no-repeat;
+      background-position: 0px -47px;
+      float: left;
+
+    }
+    .qi2{
+      width: 130px;
+      height: 30px;
+      font-size: 14px;
+      color: #666;
+      line-height: 30px;
+      margin-left: 48px;
+    }
+    .eng{
+      width: 160px;
+      height: 67px;
+      margin-left: 30px;
+    }
+    .eng1{
+      width: 34px;
+      height: 34px;
+      /*background-color: red;*/
+      background-image: url("https://misc.360buyimg.com/user/reg/1.0.0/css/i/icon.png");
+      background-repeat: no-repeat;
+      background-position: -50px -47px;
+      float: left;
+    }
+    .eng2{
+      width: 130px;
+      height: 30px;
+      font-size: 14px;
+      color: #666;
+      line-height: 12px;
+      margin-left: 48px;
+      margin-top: 30px;
+    }
+    .but{
+      width: 1210px;
+      height: 87px;
+      border-top: 1px solid #c5c5c5;
+      margin-top: 50px;
+    }
+    .but-1{
+      width: 695px;
+      height: 21px;
+      margin:30px auto;
+
+    }
+    .but-2{
+
+      font-size: 12px;
+      color: #999;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="head">
+    <div class="head-top">
+      <div class="head-top-logo">
+      </div>
+      <p class="head-text">欢迎注册</p>
+      <span class="head-text2"><a style="color:#333"href="#">请登录</a></span>
+      <span class="head-text1">已有账号？</span>
+    </div>
+    <div class="head-foot"></div>
+  </div>
+  <div class="body">
+    <div class="body-1">
+      <div class="body-2">
+        <div class="body-3">
+          <div class="body-31">用户名</div>
+          <input type="text" placeholder="您的账户名和登录名">
+        </div>
+        <span class="text"><div class="jltu"></div>支持中文、字母、数字、“-”“_”的组合，4-20个字符</span>
+        <div class="body-3">
+          <div class="body-31">设置密码</div>
+          <input type="text" placeholder="建议至少使用两种字符组合">
+        </div>
+        <span class="text"><div class="jltu"></div>建议使用字母、数字和符号两种及以上的组合，6-20个字符</span>
+        <div class="body-3">
+          <div class="body-31">确认密码</div>
+          <input type="text" placeholder="请再次输入密码">
+        </div>
+        <span class="text"><div class="jltu"></div>请再次输入密码</span>
+        <div class="body-3">
+          <div class="body-31"><select class=""　size="1">
+            <option >中国0086</option>
+          </select></div>
+          <input type="text" placeholder="建议使用常用手机">
+        </div>
+        <span class="text"><div class="jltu"></div>完成验证后，你可以用该手机登录和找回密码<a href="#" style="color:#38f;visibility:visible;float:right;margin-right:28px">邮箱验证</a></span>
+        <div class="body-3">
+          <div class="body-31">验证码</div>
+          <input type="text" placeholder="请输入验证码"><img class="ma" src="https://authcode.jd.com/verify/image?a=0&acid=6083c7fd-4361-4eb4-9b1f-3d7b8d764a48&uid=6083c7fd-4361-4eb4-9b1f-3d7b8d764a48&srcid=reg&is=b34b162385eabb8b0367f7afdefd7f1b&yys=1493044009150" alt="">
+        </div>
+        <span class="text"><div class="jltu"></div>看不清？点击图片更换验证码</span>
+        <div class="body-3">
+          <div class="body-31">手机验证码</div>
+          <input type="text" placeholder="请输入手机验证码">
+          <button class="ma">获取验证码</button>
+        </div><br>
+        <input id="chack" type="checkbox" checked>
+        <div class="body-foot">
+          阅读并同意<a style="color:#38f" href="#">《京东用户注册协议》 《隐私政策》</a>
+        </div>
+        <div><button class="sub">立即注册</button>
+
+        </div>
+
+
+
+
+
+      </div>
+      <div class="body-4">
+        <div class="qiye">
+          <div class="qi1"></div>
+          <div class="qi2">企业用户注册</div>
+        </div>
+        <div class="eng">
+          <div class="eng1"></div>
+          <div class="eng2">INTERNATIONAL
+CUSTOMERS</div>
+        </div>
+
+      </div>
+
+    </div>
+<div class="but">
+  <div class="but-1">
+
+    <a class="but-2" href="#">关于我们 |</a>
+    <a class="but-2" href="#">联系我们 |</a>
+    <a class="but-2" href="#">人才招聘 |</a>
+    <a class="but-2" href="#">商家入住 |</a>
+    <a class="but-2" href="#">广告服务 |</a>
+    <a class="but-2" href="#">手机京东 |</a>
+    <a class="but-2" href="#">友情链接 |</a>
+    <a class="but-2" href="#">销售联盟 |</a>
+    <a class="but-2" href="#">京东社区 |</a>
+    <a class="but-2" href="#">京东公益 |</a>
+    <a class="but-2" href="#">English Site </a>
+    <br>
+    <p class="but-2"style="margin-left:200px">Copyright©2004-2016  京东JD.com 版权所有</p>
+  </div>
+</div>
+  </div>
+<script src="./js/jquery-3.0.0.min.js"></script>
+<script>
+$("input").focus(function(){
+  $(this).fin
+  $(".text").show();})
+.blur(function(){
+  $(".text").hide();
+}) ;
+// $("input").eq(1).focus(function(){
+//   $(".text").eq(1).addClass("xian")
+// });
+// $("input").eq(2).focus(function(){
+//   $(".text").eq(2).addClass("xian")
+// });
+// $("input").eq(3).focus(function(){
+//   $(".text").eq(3).addClass("xian")
+// });
+// $("input").eq(4).focus(function(){
+//   $(".text").eq(4).addClass("xian")
+// });
+// $("input").eq(5).focus(function(){
+//   $(".text").eq(5).addClass("xian")
+// });
+
+</script>
+</body>
+
+</html>

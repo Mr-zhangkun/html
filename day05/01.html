@@ -1,0 +1,46 @@
+<!DOCTYPE>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>添加多个处理函数</title>
+    <style media="screen">
+    .f, .g{
+      width: 300px;
+      height: 200px;
+      border: 1px solid #a4b3b3;
+    }
+
+    </style>
+  </head>
+  <body>
+  <div class="f">fffffffff</div>
+  <div class="g">ggggggggg</div>
+  <script src="./js/jquery-3.0.0.min.js"></script>
+  <script type="text/javascript">
+  //click可以添加多个事件，按顺序触发
+  $(".f").click(function(){
+    $(this).css("background","red");
+  });
+  $(".f").click(function(){
+    $(this).css("border", "4px solid green");
+    $(".g").click();
+  });
+
+//直接触发元素的click事件
+  $(".g").click(function(){
+    $(this).css("background","green");
+  });
+
+//事件绑定
+
+//定义函数
+function handlerTwo(){
+  $(this).css("border","10px dotted #6f6c3a");
+}
+$(".f").on("click",handlerTwo);
+  </script>
+
+
+  </body>
+</html>

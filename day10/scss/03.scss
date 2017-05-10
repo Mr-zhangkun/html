@@ -1,0 +1,16 @@
+@mixin center-block {
+  font-size: 40px;
+  margin-left: auto;
+}
+
+.class{
+  @include center-block;
+}
+
+@mixin demo($font:50){
+  font-size: $font * 2;
+}
+
+.class-1{
+  @include demo(10);
+}

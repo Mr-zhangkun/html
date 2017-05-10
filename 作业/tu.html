@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>tu</title>
+  <style media="screen">
+    #tu {
+      width: 1226px;
+      height: 444px;
+      margin: 100px;
+      background: #5c5c5c;
+      float: left;
+      background: url("./image/0.jpg");
+      /*visibility: hidden;*/
+    }
+
+    span {
+      width: 8px;
+      height: 8px;
+      float: right;
+      background-color: rgba(255, 255, 255, 0.3);
+      border-radius: 10px;
+      margin-right: 20px;
+      margin-top: 420px;
+    }
+
+
+  </style>
+</head>
+
+<body>
+  <div id="tu">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <script src="./js/jquery-3.0.0.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      for (var i = 0; i < 5; i++) {
+        $("span").eq(i).click(i, function(event) {
+          $("#tu").css("background" ,"url(./image/" + event.data + ".jpg)");
+
+        });
+      }
+      $("span").hover(function() {
+        $(this).css("background", "#999")
+      }, function() {
+        $(this).css("background", "rgba(255,255,255,0.3)")
+      });
+
+
+    });
+  </script>
+</body>
+
+</html>

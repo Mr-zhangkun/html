@@ -1,0 +1,10 @@
+@function name($size){
+  @return $size * 3;
+}
+
+
+
+h1{
+  font-size: name(20px);
+  color: green;
+}

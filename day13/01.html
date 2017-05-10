@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,  initial-scale=1.0,maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+  <title>菜鸟物流</title>
+  <style media="screen">
+    .my-navbar {
+      height: 60px;
+      background: #fff;
+      border: none;
+      margin-bottom: 0;
+    }
+
+    .navbar-brand {
+      padding: 0;
+    }
+
+    #shownav span {
+      font-size: 12px;
+    }
+
+    i {
+      display: block;
+      width: 204px;
+      height: 34px;
+      background-image: url("https://img.alicdn.com/tps/TB11jw4MXXXXXbhXVXXXXXXXXXX-672-797.png");
+      margin: 30px auto;
+    }
+
+    .my-1 p {
+      color: #666;
+      font-size: 18px;
+    }
+
+    .one {
+      width: 260px;
+      height: 210px;
+      background-color: #f9f9f9;
+      margin: 10px;
+    }
+
+    .my-11 {
+      width: 46px;
+      height: 42px;
+      margin: 30px 0 28px 180px;
+      /*margin-left: 180px;*/
+      background-image: url("https://img.alicdn.com/tps/TB1rQ01MXXXXXbjXFXXXXXXXXXX-267-111.png");
+    }
+
+    .my-12 {
+      width: 110px;
+      height: 110px;
+      margin-left: 20px;
+      border: 1px solid;
+      background-image: url("https://img.alicdn.com/tps/TB11jw4MXXXXXbhXVXXXXXXXXXX-672-797.png");
+      background-position: 0px -74px;
+      float: left;
+    }
+
+    .my-13 {
+      width: 100px;
+      height: 110px;
+      float: right;
+      margin-top: 5px;
+    }
+
+    .my-21 {
+      width: 46px;
+      height: 42px;
+      margin: 30px 0 28px 180px;
+      /*margin-left: 180px;*/
+      background-image: url("https://img.alicdn.com/tps/TB1rQ01MXXXXXbjXFXXXXXXXXXX-267-111.png");
+      background-position: -50px 0px;
+    }
+
+    .my-22 {
+      width: 110px;
+      height: 110px;
+      margin-left: 20px;
+      border: 1px solid;
+      background-image: url("https://img.alicdn.com/tps/TB11jw4MXXXXXbhXVXXXXXXXXXX-672-797.png");
+      background-position: -122px -73px;
+      float: left;
+    }
+
+    .my-31 {
+      width: 46px;
+      height: 42px;
+      margin: 30px 0 28px 180px;
+      /*margin-left: 180px;*/
+      background-image: url("https://img.alicdn.com/tps/TB1rQ01MXXXXXbjXFXXXXXXXXXX-267-111.png");
+      background-position: -93px 0px;
+    }
+
+    .my-32 {
+      width: 110px;
+      height: 110px;
+      margin-left: 20px;
+      border: 1px solid;
+      background-image: url("https://img.alicdn.com/tps/TB11jw4MXXXXXbhXVXXXXXXXXXX-672-797.png");
+      background-position: -241px -73px;
+      float: left;
+    }
+
+    .my-41 {
+      width: 46px;
+      height: 42px;
+      margin: 30px 0 28px 180px;
+      /*margin-left: 180px;*/
+      background-image: url("https://img.alicdn.com/tps/TB1rQ01MXXXXXbjXFXXXXXXXXXX-267-111.png");
+      background-position: -140px 0px;
+    }
+
+    .my-42 {
+      width: 110px;
+      height: 110px;
+      margin-left: 20px;
+      border: 1px solid;
+      background-image: url("https://img.alicdn.com/tps/TB11jw4MXXXXXbhXVXXXXXXXXXX-672-797.png");
+      background-position: -361px -73px;
+      float: left;
+    }
+
+    .two {}
+
+    .i1 {
+      width: 136px;
+      background-position: -225px 0px;
+      margin-top: 100px;
+    }
+
+    .i2 {
+      width: 136px;
+      background-position: -383px 0px;
+      margin-top: 100px;
+    }
+
+    .i3 {
+      width: 136px;
+      background-position: -536px 0px;
+      margin-top: 100px;
+    }
+
+    .my-tu {
+      width: 290px;
+      height: 153px;
+      position: relative;
+      left: -15px;
+    }
+
+    .my-51 {
+      width: 290px;
+      height: 350px;
+      margin: 50px;
+      margin-top: 20px;
+      border: 1px solid #e5e5e5;
+    }
+
+    .my-51 p {
+      text-align: left;
+    }
+
+    .my-52 {
+      margin: 5px;
+    }
+    .carousel-indicators li:hover{
+      background-color: #f63;
+    }
+    .my-btn{
+      width: 361px;
+      height: 62px;
+      background-color: #f63;
+      color: #fff;
+      font-size: 28px;
+      line-height: 62px;
+      margin-top: 30px;
+      margin-bottom: 80px;
+    }
+    span a{
+      font-size: 0.8em;
+      color: #999;
+      text-align: center;
+      margin-right: 20px;
+      float: left;
+
+    }
+    span a:hover{
+      color: #EC4F2F;
+      text-decoration: none;
+    }
+    .my-foot{
+      margin-bottom: 100px;
+    }
+
+    .icon-1{
+      width: 66px;
+      height: 66px;
+      margin: 5px auto;
+      background-image:url("https://img.alicdn.com/tps/TB1rQ01MXXXXXbjXFXXXXXXXXXX-267-111.png");
+      background-position: 0px -45px;
+
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-default my-navbar navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a href="#" class="navbar-brand"><img src="https://img.alicdn.com/tps/i4/TB1nKtGHXXXXXalXpXX19pNIXXX-215-60.png" alt=""></a>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#shownav">
+  <span class="icon-bar"></span>
+  <span class="icon-bar"></span>
+  <span class="icon-bar"></span>
+</button>
+      </div>
+
+      <ul class="nav navbar-nav collapse navbar-collapse navbar-right" id="shownav">
+        <li><a href="#">首页</a></li>
+        <li><a href="#">入住标准</a></li>
+        <li><a href="#">咨询中心</a></li>
+        <li><a href="#">常见问题</a></li>
+        <li><a href="#">合作伙伴</a></li>
+
+        <li><a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true">登录 4001787878</span></a></li>
+      </ul>
+    </div>
+  </nav>
+  <img style="margin-bottom:50px;margin-top:60px" src="https://img.alicdn.com/tps/TB1rx4jMpXXXXarXFXXXXXXXXXX-1615-480.png" alt="" class="img-responsive">
+  <div class="container text-center my-1">
+    <div class="title">
+      <i></i>
+    </div>
+    <p>菜鸟驿站是由阿里巴巴旗下菜鸟网络牵头，建立面向社区和校园的物流服务平台，为用户</p>
+    <p>提供包裹代收、代寄等服务，致力于为消费者提供多元化的最后一公里服务。</p>
+    <div class="row">
+      <div class="one col-md-3 col-sm-6 col-xs-12">
+        <div class="my-11"></div>
+        <div class="my-12"></div>
+
+        <div class="my-13">
+
+          <p>网购代收</p>
+          <p>线下自提</p>
+          <p>安全保管</p>
+        </div>
+      </div>
+      <div class="one col-md-3 col-sm-6 col-xs-12">
+        <div class="my-21"></div>
+        <div class="my-22"></div>
+
+        <div class="my-13">
+
+          <p>便捷代寄</p>
+          <p>线上下单</p>
+          <p>在线支付</p>
+        </div>
+      </div>
+      <div class="one col-md-3 col-sm-6 col-xs-12">
+        <div class="my-31"><0px/div>
+        <div class="my-32"></div>
+
+        <div class="my-13">
+
+          <p> </p>
+          <p>个性化服务</p>
+          <p>特色服务</p>
+        </div>
+      </div>
+      <div class="one col-md-3 col-sm-6 col-xs-12">
+        <div class="my-41"></div>
+        <div class="my-42"></div>
+        <div class="my-13">
+          <p> </p>
+          <p>便民服务</p>
+          <p>生活服务</p>
+        </div>
+      </div>
+    </div>
+    <div class="container two">
+      <div class="title">
+        <i class="i1"></i>
+      </div>
+      <div class="row">
+        <div class="col-md-4 my-51">
+          <img class="my-tu" src="./images/11.png" alt="">
+
+          <p><img class="my-52" src="https://img.alicdn.com/tps/TB1zVOAMXXXXXcmXpXXXXXXXXXX-8-8.png" alt="">通过菜鸟驿站代收、代寄包裹等服务，获得物流收益。</p>
+        </div>
+        <div class="col-md-4 my-51">
+          <img class="my-tu" src="./images/12.png" alt="">
+
+          <p><img class="my-52" src="https://img.alicdn.com/tps/TB1P6GPMXXXXXa2XXXXXXXXXXXX-8-8.png" alt="">通过稳定的包裹量给店铺带来客流量，将客流量转为店铺营业额。</p>
+          <p><img class="my-52" src="https://img.alicdn.com/tps/TB1P6GPMXXXXXa2XXXXXXXXXXXX-8-8.png" alt="">享受阿里巴巴线上资源落地的优先权，为店铺带来更多增值收益。</p>
+        </div>
+        <div class="col-md-4 my-51">
+          <img class="my-tu" src="./images/13.png" alt="">
+          <p><img class="my-52" src="https://img.alicdn.com/tps/TB1GqqfMXXXXXcfXFXXXXXXXXXX-8-8.png" alt="">提供专业操作系统，免费发送短信。
+          </p>
+          <p><img class="my-52" src="https://img.alicdn.com/tps/TB1GqqfMXXXXXcfXFXXXXXXXXXX-8-8.png" alt="">完善的业务技能、运营技巧等系列培训。
+          </p>
+          <p><img class="my-52" src="https://img.alicdn.com/tps/TB1GqqfMXXXXXcfXFXXXXXXXXXX-8-8.png" alt="">不定期宣传，提升店铺影响力。</p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="title">
+        <i class="i2"></i>
+      </div>
+      <div class="row">
+        <div class="col-md-3 col-sm-6 col-xs-12 i2-1 text-center">
+          <div class="icon-1"></div>
+          <h4>01填写/提交合作基本资料</h4>
+          <p>填写申请信息</p>
+          <p>提交资质</p>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12 i2-1 text-center">
+          <div class="icon-1"></div>
+          <h4>02小二初审，资质审核</h4>
+          <p>初审结果以短信通知或</p>
+          <p>可在入驻进度处查看</p>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12 i2-1 text-center">
+          <div class="icon-1"></div>
+          <h4>03签署协议，冻结保证金</h4>
+          <p>为保证消费者权益</p>
+          <p>需要缴纳一定保证金</p>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12 i2-1 text-center">
+          <div class="icon-1"></div>
+          <h4>04入驻完成，正式运营</h4>
+          <p>入驻成功后熟悉业务操作</p>
+          <p>正式开展运营</p>
+        </div>
+
+      </div>
+    </div>
+    <div class="container my-foot">
+      <div class="title">
+        <i class="i3"></i>
+      </div>
+      <p>不论你是个人、学生、企业，都有机会加入菜鸟驿站</p>
+
+      <div id="myCarousel" class="carousel slide">
+        <!-- 轮播（Carousel）指标 -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <!-- 轮播（Carousel）项目 -->
+        <div class="carousel-inner">
+          <div class="item active">
+            <img src="https://img.alicdn.com/tps/TB19eFsMpXXXXa8XXXXXXXXXXXX-1188-510.png" alt="First slide">
+          </div>
+          <div class="item">
+            <img src="https://gw.alicdn.com/tps/TB12u5zKVXXXXbZXXXXXXXXXXXX-561-502.png" alt="Second slide">
+          </div>
+          <div class="item">
+            <img src="https://gw.alicdn.com/tps/TB1tSqBKVXXXXaAXXXXXXXXXXXX-800-600.jpg" alt="Third slide">
+          </div>
+        </div>
+        <!-- 轮播（Carousel）导航 -->
+        <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+    </a>
+        <a class="carousel-control right" href="#myCarousel" data-slide="next">
+</a>
+</div>
+<a class="btn btn-default my-btn" href="#" role="button">马上申请合作</a>
+<br>
+
+<span><a href="#">菜鸟网络</a></span>
+<span><a href="#">菜鸟联盟</a></span>
+<span><a href="#">菜鸟驿站</a></span>
+<span><a href="#">菜鸟裹裹</a></span>
+<span><a href="#">物流云</a></span>
+<span><a href="#">Global全球物流跟踪</a></span>
+<br>
+<span><a href="#">菜鸟网络</a></span>
+<span><a href="#">|</a></span>
+<span><a href="#">菜鸟联盟</a></span>
+<span><a href="#">|</a></span>
+<span><a href="#">菜鸟驿站</a></span>
+<span><a href="#">|</a></span>
+<span><a href="#">菜鸟裹裹</a></span>
+<span><a href="#">|</a></span>
+<span><a href="#">物流云</a></span>
+<span><a href="#">|</a></span>
+<span><a href="#">Global全球物流跟踪</a></span>
+<span><a href="#">|</a></span>
+<span><a href="#">菜鸟驿站</a></span>
+<span><a href="#">|</a></span>
+<span><a href="#">菜鸟裹裹</a></span>
+<span><a href="#">|</a></span>
+<span><a href="#">物流云</a></span>
+<span><a href="#">|</a></span>
+<span><a href="#">Global全球物流跟踪</a></span>
+<br>
+<span><a href="#">菜鸟裹裹</a></span>
+<span><a href="#">|</a></span>
+<span><a href="#">物流云</a></span>
+<span><a href="#">|</a></span>
+<span><a href="#">Global全球物流跟踪</a></span>
+<span><a href="#">|</a></span>
+<span><a href="#">菜鸟驿站</a></span>
+<span><a href="#">|</a></span>
+<span><a href="#">菜鸟裹裹</a></span>
+<span><a href="#">|</a></span>
+<span><a href="#">物流云</a></span>
+<span><a href="#">|</a></span>
+<span><a href="#">Global全球物流跟踪</a></span>
+<br>
+<p></p>
+
+<span><a href="#">© 2015-2017 菜鸟网络 版权所有 增值电信业务经营许可证： 浙B2-20160216   浙公网安备33010002000117号</a></span>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <script src="./js/jquery-3.0.0.js"></script>
+  <script src="./bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

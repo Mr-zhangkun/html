@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>导航栏</title>
+  <style media="screen">
+    body {
+      perspective: 1000px;
+      transform-style: preserve-3d;
+    }
+    .one{
+      width: 200px;
+      height: 50px;
+      float: left;
+    }
+
+    .f,
+    .g {
+      width: 200px;
+      height: 50px;
+      position: absolute;
+      top: 100px;
+      left: 400px;
+      font-size: 30px;
+      line-height: 50px;
+      text-align: center;
+      transition: all 2s ease;
+    }
+
+    .f {
+      background: #123;
+      transform: rotateX(-90deg) translateZ(-25px);
+    }
+    .g {
+      background: red;
+      transform: rotateX(0deg) translateZ(25px);
+    }
+
+    .g:hover {
+      transform: rotateX(-90deg) translateZ(0px);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="one">
+    <div class="f">导航二</div>
+    <div class="g">导航一</div>
+  </div>
+  <!-- <div class="one">
+    <div class="g">导航一</div>
+    <div class="f">导航二</div>
+  </div>
+  <div class="one">
+    <div class="g">导航一</div>
+    <div class="f">导航二</div> -->
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>天空</title>
+    <style media="screen">
+    *{
+      margin:0;
+      padding:0;
+    }
+    .bg{
+      width: 2000px;
+      height:1000px;
+      background: lightblue;
+      padding-top: 100px;
+    }
+    .yue{
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: #fff;
+      margin:0px 100px;
+
+    }
+    .yue1{
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background:rgba(252,252,252,0.3);
+      /*margin:0px 100px;*/
+
+      animation: yue 2s linear 100;
+    }
+    @keyframes yue {
+      0% {
+        transform: scale(1);
+      }
+      50%{
+        transform: translate(0px, 0)scale(1.2);
+      }
+      100% {
+        transform: scale(1.8);
+      }
+    }
+    .h1,.h2{
+      position: absolute;
+      top: 700px;
+
+    }
+    .h1{
+      animation: dong 2s linear 100;
+    }
+    .h2{
+      animation: dong 2s linear 1s 100;
+    }
+    @keyframes dong {
+      0%{
+      transform: translate(0,0)
+      }
+      50%{
+        transform: translate(0,50px);
+      }
+      100%{
+        transform: translate(0,0px);
+      }
+    }
+
+    </style>
+
+  </head>
+  <body>
+    <div class="bg">
+      <div class="yue"><div class="yue1"></div></div>
+      <img class="h1"src="./image/1.png" alt="">
+      <img src="./image/2.png" alt="" class="h2">
+    </div>
+  </body>
+</html>

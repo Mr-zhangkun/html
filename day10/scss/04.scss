@@ -1,0 +1,11 @@
+@mixin one($width){
+  @media screen and (width-max:$width){
+    @content;
+  }
+}
+
+@include one(500px){
+  body{
+    background: red;
+  }
+}
