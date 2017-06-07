@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>setTimeout</title>
+</head>
+
+<body>
+  <h1 id="ele">jalkfs</h1>
+  <script type="text/javascript">
+    var num = 0, id;
+    var ele = document.getElementById("ele")
+
+    function output() {
+      num++;
+      console.log(num);
+      ele.innerHTML = num;
+      if (num == 10) {
+        return;
+      }
+      id = setTimeout(output, 1000);
+    }
+    output();
+  </script>
+
+</body>
+
+</html>

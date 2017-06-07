@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>自定义构造函数</title>
+</head>
+<body>
+  <script type="text/javascript">
+    function Person(name, age, score){
+      this.name = name;
+      this.age = age;
+      this.getScore = function(){
+        console.log(score * 100);
+      }
+    }
+
+    var obj = new Person("lisi", 34, 12);
+    console.log(obj.name);
+    obj.getScore();
+
+    var obj1 = new Person("zhangsan", 12, 56);
+    obj1.getScore();
+    console.log(obj1.age);
+
+
+
+
+  </script>
+
+</body>
+</html>

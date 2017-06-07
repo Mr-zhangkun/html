@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style media="screen">
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    #f {
+      margin-right: 100px;
+      margin-top: 100px;
+      background-color: #fff;
+      list-style: none;
+      float: right;
+      position: relative;
+      z-index: 100;
+    }
+
+    li {
+      width: 100px;
+      height: 40px;
+      text-align: center;
+      line-height: 40px;
+      font-size: 20px;
+      border: 1px solid #333;
+      border-bottom: 1px solid red;
+      float: left;
+
+    }
+
+    p {
+      width: 1000px;
+      height: 500px;
+      text-align: left;
+      border: 1px solid red;
+      position: absolute;
+      top: 41px;
+      right:0px;
+      background-color: #fff;
+      float: right;
+      display: none;
+      z-index: -20;
+    }
+
+    .one {
+      border: 1px solid red;
+      border-bottom: 1px solid rgba(0,0,0,0);
+    }
+    .two{
+      display: block;
+    }
+    span{
+      width: 1000px;
+      height: 500px;
+      text-align: left;
+      border: 1px solid red;
+      position: absolute;
+      top: 141px;
+      right:100px;
+    }
+  </style>
+</head>
+
+<body>
+  <ul id="f">
+    <li id="s1">服装<p class="two">1</p></li>
+    <li id="s2">服装<p>2</p></li>
+    <li id="s3">服装<p>3</p></li>
+    <li id="s4">服装<p>4</p></li>
+    <li id="s5">服装<p>5</p></li>
+    <li id="s6">服装<p>6</p></li>
+  </ul>
+  <span></span>
+  <script type="text/javascript">
+    var a = document.getElementById("s1");
+    var b = document.getElementById("s2");
+    var c = document.getElementById("s3");
+    var d = document.getElementById("s4");
+    var e = document.getElementById("s5");
+    var f = document.getElementById("s6");
+
+    function hong(node) {
+      node.addEventListener("mouseover", function(event) {
+        this.setAttribute("class", "one");
+        this.children[0].setAttribute("class", "two");
+
+      });
+      node.addEventListener("mouseout", function(event) {
+        this.removeAttribute("class");
+        this.children[0].removeAttribute("class");
+      });
+    };
+    hong(a);
+    hong(b);
+    hong(c);
+    hong(d);
+    hong(e);
+    hong(f);
+  </script>
+</body>
+
+</html>

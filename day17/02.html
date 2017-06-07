@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>消除闭包影响</title>
+
+</head>
+
+<body>
+  <div>
+    <ul id="lis">
+      <li>0</li>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+    <h1 id="show">...</h1>
+  </div>
+  <script src="./jquery-3.0.0.js"></script>
+  <script>
+    var lis = document.getElementById("lis").children;
+    var show = document.getElementById("show");
+    //立即函数
+    /*
+        for(var i = 0, a = lis.length; i < a; i++){
+          (function(i){
+          lis[i].addEventListener("click", function(){
+          show.innerHTML = i;
+          });
+        })(i);
+        }
+    */
+    //添加自定义属性
+    /*
+        for (var i = 0, a = lis.length; i < a; i++) {
+          lis[i].index = i;
+          lis[i].addEventListener("click", function() {
+            show.innerHTML = this.index;
+          });
+        }
+    */
+    //jquery-3
+    for (var i = 0; i < lis.length; i++) {
+      $(lis).eq(i).click(i, function(event) {
+        show.innerHTML = event.data;
+      });
+    }
+  </script>
+</body>
+
+</html>

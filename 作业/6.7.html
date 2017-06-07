@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style media="screen">
+    div{
+      width: 500px;
+      height: 600px;
+      margin:100px auto;
+    }
+    input{
+      width: 400px;
+      height: 200px;
+      margin:10px auto;
+    }
+    button{
+      width: 50px;
+      height: 30px;
+    }
+    ul{
+      list-style: none;
+    }
+    li{
+      border-bottom: 1px dashed green;
+      margin:10px;
+    }
+    a{
+      color: red;
+      float: right;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <textarea name="name" rows="8" cols="80"></textarea>
+    <br>
+    <button type="button" name="button">发布</button>
+    <ul>
+
+    </ul>
+  </div>
+  <script src = "./js/jquery-3.0.0.min.js"></script>
+  <script type="text/javascript">
+
+  $("button").click(function(){
+    var a = $("textarea").val();
+    $("ul").prepend("<li></li>");
+    $("li").eq(0).html(a);
+    $("li").eq(0).prepend("<a>删除</a>");
+
+    $("a").click(function(){
+      $(this).parent().remove();
+    });
+    $('textarea').replaceWith('<textarea name="name" rows="8" cols="80"></textarea>');
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+</html>

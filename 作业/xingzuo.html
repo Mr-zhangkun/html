@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>星座</title>
+  <style media="screen">
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    #one {
+      width: 400px;
+      height: 300px;
+      margin: 200px auto;
+      border: 1px solid #000;
+    }
+
+    #two {
+      font-size: 20px;
+      color: green;
+      margin-left: 26px;
+    }
+
+    #tu {
+      width: 50px;
+      height: 50px;
+      background-image: url("./image/Icon.png");
+      background-position: 0px 0px;
+      float: left;
+      margin-left: 30px;
+    }
+    select{
+      width: 100px;
+      height: 30px;
+      margin:7px;
+    }
+
+    #zi {
+      width: 150px;
+      height: 30px;
+      font-size: 16px;
+
+
+    }
+
+    #xing{
+      width: 80px;
+      height: 13px;
+      background-image: url("./image/yunshi.png");
+      background-position: 0px 0px;
+      position: relative;
+      top: -25px;
+      left: 150px;
+    }
+    #xing1{
+      width: 80px;
+      height: 13px;
+      overflow:hidden;
+    }
+    img{
+
+      position: relative;
+      top: -27px;
+      left: 0px;
+    }
+    p{
+      display: none;
+      color: pink;
+    }
+    #see{
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="one">
+    <div id="two">星座运势</div>
+    <div id="tu"></div>
+  <select>
+  <option value="0" selected="selected">白羊座</option>
+  <option value="1">金牛座</option>
+  <option value="2">双子座</option>
+  <option value="3">选项4</option>
+  <option value="4">选项5</option>
+  <option value="5">选项6</option>
+  <option value="6">选项7</option>
+  <option value="7">选项8</option>
+  <option value="8">选项9</option>
+  <option value="9">选项10</option>
+  <option value="10">选项11</option>
+  <option value="11">选项12</option>
+</select>
+
+  <div id="zi">今日运势:</div>
+  <div id="xing"><div id="xing1"><img src="./image/yunshi.png" alt=""></div></div>
+
+  <p id="as0">白羊座（Aries），黄道十二星座之第一宫，位于双鱼座之东，金牛座之西，出生日期为阳历3月21日~4月20日。白羊座就像小孩子一样，直率、热情、冲动，但也十分的自我为中心和孩子气。</p>
+  <p id="as1">金牛座（Taurus），是黄道十二宫的第二宫，出生日期为阳历4月20日~5月20日，位于白羊座之东。</p>
+  <p id="as2">双子座（Gemini），出生日期为5月21日~6月21日，是黄道十二宫里的第三宫，代表了多变、沟通。</p>
+  <p id="as3"></p>
+  <p id="as4"></p>
+  <p id="as5"></p>
+  <p id="see"></p>
+
+
+  <script src="./js/jquery-3.0.0.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+    var array = [0, -50, -100, -150, -200, -250, -300, -350, -400, -450, -500, -550];
+    var xing = [80, 73, 64, 57, 48, 40, 31, 24, 14, 6, 0, 48];
+    var zi = [0, 1, 2, 3, 4, 5];
+    $("select").change(function() {
+      var i = $(this).val();
+      $("#tu").css("background-position", "0px" + " " + array[i] + "px");
+      $("#xing1").css("width",xing[i] + "px");
+      var world = $("#as" + zi[i]).text();
+      $("#see").html(world);
+    });
+
+  });
+  </script>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

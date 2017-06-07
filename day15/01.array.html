@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>数组方法</title>
+</head>
+<body>
+  <script type="text/javascript">
+    var a = [2, 4, 3, 10, 7, 50,6];
+    console.log("++++++++++++++join 拼接元素+++++++++++++");
+    var b = a.join("-");
+    console.log(b);  //减法
+    console.log(eval(b));//-24
+    console.log(a.join(""));//2431756
+
+    console.log("++++++++++++++reverse 镜像反转+++++++++++++");
+    console.log(a.reverse());
+    console.log(a);//改变数组本身
+
+    console.log("++++++++++++++sort 排序+++++++++++++");
+    console.log(a.sort());//默认按编码排序
+    a.sort(function(m, n){
+      return m - n;
+    });
+    console.log(a);//按数字大小排序
+
+    console.log("++++++++++++++concat 拼接数组++++++++++++");
+    var c = [34,546,876,8967,32];
+    var d = a.concat(c);
+    console.log(d);
+  </script>
+
+</body>
+</html>

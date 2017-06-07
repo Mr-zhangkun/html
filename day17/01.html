@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>闭包</title>
+</head>
+
+<body>
+
+  <script type="text/javascript">
+  function fun1(arg){
+    var i = 5;
+    function fun2(arg1){
+      console.log(i + arg1 + arg);
+    }
+    return fun2;
+  }
+
+  var a = fun1(1);
+  a(2);//8
+
+  var b = fun1(5);
+  b(3);//13
+  </script>
+</body>
+
+</html>

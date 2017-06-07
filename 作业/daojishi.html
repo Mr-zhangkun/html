@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>setTimeout</title>
+</head>
+
+<body>
+  <h1 id="ele"></h1>
+  <script type="text/javascript">
+    var a, b, c, d, e, id;
+    var ele = document.getElementById("ele");
+    var cha = 0, time1, time2;
+    id = setInterval(function() {
+      time1 = new Date();
+      time2 = new Date("2017-06-18 0:0:0:0");
+      cha = time2.getTime() - time1.getTime();
+      console.log(time2.getTime());
+      if( cha == 0){
+        clearInterval(id);
+      }
+      a = Math.floor(cha / 1000);//秒
+      b = Math.floor(a % 60);//s
+      c = Math.floor((a / 60) % 60);//m
+      d = Math.floor((a / 3600) % 24);//h
+      e = Math.floor((a / 3600) / 24);//d
+      ele.innerHTML = "据。。。还有" + e + ":" + d + ":" + c + ":" + b;
+    }, 1000);
+
+
+  </script>
+
+</body>
+
+</html>

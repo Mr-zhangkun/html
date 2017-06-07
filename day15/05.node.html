@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>节点属性</title>
+</head>
+
+<body>
+  <div id="f">
+    <div id="s"></div>
+  </div>
+  <div class="one"></div>
+  <script type="text/javascript">
+    var f = document.getElementById("f");
+    var s = document.getElementById("s");
+    var one = document.getElementsByClassName("one")[0];
+    console.log(one);
+    console.log(s);
+    f.innerHTML = "父节点";
+    s.innerHTML = "子节点";
+    one.innerHTML = "one节点";
+    console.log("------------获得属性值----------");
+    var id = f.getAttribute("id"); //获得特性值
+    console.log(id);
+
+    console.log(f.id); //获得属性值
+    console.log(one.class);
+    console.log(one.className);
+    console.log(one.getAttribute("class"));
+
+    console.log("-----------修改属性值---------------");
+    f.setAttribute("style", "font-size:30px");//
+    f.style.cssText = "color:green; background-color:#349; border:1px solid yellow";
+    f.style.color = "red";//可覆盖前面的
+    f.style.backgroundColor = "#222";//驼峰法命名css名字
+  </script>
+</body>
+
+</html>

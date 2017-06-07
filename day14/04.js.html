@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>操作符</title>
+</head>
+<body>
+  <script type="text/javascript">
+    var a = 123 + "" + 1;
+    console.log(a);
+
+    console.log(25 & 3);
+
+  var and = 25 & 3;
+  alert(and);
+  var or = 25 | 3;
+  alert(or);
+  var nor = 25 ^ 3;
+  alert(nor);
+
+  var a = -64;
+  // a = a << 5;
+  a = a >>> 5;
+  console.log(parseInt(a));
+console.log("++++++++++++++++++++++++++++++++++++++++++");
+
+var m = 0, n = 1;
+console.log(m && ++n);//0
+console.log(n);//1
+
+console.log(10 && 30);
+
+console.log("+++++++++++++++++++++++++++++++++++==");
+console.log(1 || n); //1
+console.log(0 || n--); //1
+console.log(0 || --n); //-1
+console.log(0 || 0);//0
+
+console.log(!true);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+</html>

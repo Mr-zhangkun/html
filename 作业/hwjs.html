@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>函数</title>
+</head>
+
+<body>
+  <script type="text/javascript">
+    //回文。。。。。。。。。。。。。。。。。。。。。
+    var str1 = [1, 3, 4, 5, "a", "a", 5, 4, 3, 1];
+    var str2 = [1, 4, 6, 7, 8, 9, 9];
+
+    function huiwen(str) {
+      var a = str.join("");
+      var b = str.reverse().join("");
+
+      if (a === b) {
+        console.log("true");
+      } else {
+        console.log("false");
+      }
+    };
+    huiwen(str1);
+    huiwen(str2);
+    //进制转换。。。。。。。。。。。。。。。。。。。。。。
+    var val1 = 33;
+    var val2 = 11;
+
+    function jinzhi(val) {
+      var m = new Array();
+      for (var i = 0;; i++) {
+        m[i] = val % 2;
+        val = val / 2;
+        val = parseInt(val);
+        if (val === 0) {
+          break;
+        }
+      };
+      var k = parseInt(m.reverse().join(""));
+      console.log(k);
+    };
+    jinzhi(val1);
+
+    //括号。。。。。。。。。。。。。。。。。。。。。。。。
+    var a = ["(", "(", ")", 4, ")"];
+    var b = ["(", "(", ")", 4, ")","("];
+    var c = ["(",")"];
+    function kuohao(d,array) {
+      var i = 0;
+      array.forEach(function(e, i, a) {
+        if (e == d[0]){
+          i++;
+        } else if (e == d[1]) {
+          i--;
+        }
+      });
+      var c = (i === 0) ? true : false;
+      console.log(c);
+    };
+    kuohao(c,a);
+    kuohao(c,b);
+  </script>
+
+</body>
+
+</html>

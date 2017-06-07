@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>创建对象</title>
+</head>
+<body>
+
+  <script type="text/javascript">
+    var a = {};
+    a.name = "asdfrrr";
+    a.age = 5;
+    a.getName = function(){
+      console.log(a.name);
+    };
+    console.log(a.name);
+    console.log(a.age);
+    console.log(a["age"]);
+    a.getName();
+
+    var b  = {
+      name:"asdf",
+      age: 23,
+      getName: function(){
+        console.log(this.name);
+      }
+    }
+    console.log(b.name);
+    console.log(b.age);
+    b.getName();
+
+
+    var c = new Object;
+    var d = new Date;
+    console.log(c);
+    console.log(d);
+
+
+    var num = new Number(999);
+    var str = new String("asdf");
+    var br = new Boolean(true);
+    console.log(num, str, br);
+  </script>
+</body>
+</html>

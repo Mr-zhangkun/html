@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>节点的操作</title>
+</head>
+<body>
+
+  <script>
+  //创建节点
+    var f = document.createElement("div");//创建标签节点
+    var s = document.createElement("div");//创建标签节点
+    var a = document.createElement("div");//创建标签节点
+    f.innerHTML = "发掘的时刻了解福建爱上对方就爱了";//添加内容
+    s.innerHTML = "fsadasdf";
+    console.log(f);
+
+    console.log("--------添加节点--------------");
+    f.appendChild(a);//添加到父节点的末尾，且是子节点
+    f.insertBefore(s, a);//添加到父节点下兄弟节点之前
+    // console.log(f);
+    var s1 = s.cloneNode(true);//true深度复制，false浅复制，只复制标签
+    console.log(s1);
+    f.insertBefore(s1, null);
+    console.log(f);
+
+    console.log("------------删除节点--------------");
+    f.removeChild(s);
+    console.log(f);
+
+
+  </script>
+</body>
+</html>

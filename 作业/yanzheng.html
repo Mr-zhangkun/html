@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>验证码</title>
+  <style media="screen">
+    div {
+      width: 500px;
+      height: 500px;
+      margin: 200px auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="">
+
+    <h1 id="one">等待获取...</h1>
+    <button id="two">获取验证码</button>
+  </div>
+  <script type="text/javascript">
+    var one = document.getElementById("one");
+    var two = document.getElementById("two");
+
+
+    var arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+    var arr1 = [];
+    var arr2 = [];
+    var id, num;
+
+    function output() {
+      for (var i = 0; i < 6; i++) {
+        arr1[i] = Math.floor(Math.random() * 36 + 0);
+        arr2[i] = arr[arr1[i]];
+      }
+      setTimeout(output, 0);
+    };
+    two.addEventListener("click", function() {
+      output();
+      one.innerHTML = arr2.join("");
+    });
+  </script>
+</body>
+
+</html>

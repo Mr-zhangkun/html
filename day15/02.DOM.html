@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>dom</title>
+</head>
+
+<body>
+  <button id="btn1">按钮１</button>
+  <button id="btn2">按钮２</button>
+
+  <script>
+    var btn1 = document.getElementById("btn1");
+    var btn2 = document.getElementById("btn2");
+
+    //dom0级  不能移除事件
+    btn1.onclick = function() {
+      console.log("btn1 ...DOM0");
+    };
+
+    //dom2级
+    btn1.addEventListener("click", function() {
+      console.log("btn1------DOM2-------");
+    }, false);
+
+    function bandle() {
+      console.log("bandle----函数-------");
+    };
+    // btn1.addEventListener("click", bandle, false);
+    // btn1.removeEventListener("click", bandle, false);
+
+    //封装一个函数 添加事件
+    function addEvent(obj, type, fun) {
+      if (obj.addEventListener) {
+        obj.addEventListener(type, fun, false);
+      } else if (obj.attachEvent) {
+        obj.attachEvent("on" + type, fun);
+      } else {
+        obj["on" + type] = fun;
+      }
+    };
+    //封装函数，移除事件
+    function removeEvent(obj, type, fun) {
+      if (obj.removeEventListener) {
+        obj.removeEventListener(type, fun, false);
+      } else if (obj.detachEvent) {
+        obj.detachEvent(type, fun);
+      }
+    };
+
+
+    addEvent(btn1, "click", bandle);
+    addEvent(btn2, "click", bandle);
+    removeEvent(btn1, "click", bandle);
+  </script>
+
+</body>
+
+</html>
