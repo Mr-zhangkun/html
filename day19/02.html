@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>正则表达式</title>
+</head>
+<body>
+  <script type="text/javascript">
+    var regexp = new RegExp(/[a-z]/);
+    var regexp = /./
+    console.log(regexp.test("adfs"));
+    //返回数组。。。。０：匹配到的字符串。１：捕获１。　２：捕获２。　index：起始位置。
+    var ret = "123asdasdf3asdf1234";
+    console.log(ret.match(/asd/g));
+    console.log(ret.match(/3(as)(df)/));//捕获
+    console.log(ret.match(/3(as)(df)/g));//加g没有
+    //返回值，查到的第一个位置。没查到返回－１．
+    console.log(ret.search(/asdf/));//3
+    console.log(ret.search(/asdf/g));//3
+    console.log(ret.search(/vcx/));
+
+    //*?  +?  最短匹配
+  ret = "asdfasdasdfasdf123"
+    console.log(ret.match(/a.*f/));//asdfasdasdfasdf
+    console.log(ret.match(/a.*?f/));//asdf
+  </script>
+
+</body>
+</html>

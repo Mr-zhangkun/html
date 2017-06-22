@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>替换replace</title>
+</head>
+<body>
+  <script type="text/javascript">
+    var ret = "background-color";
+
+
+
+    var ret1 = ret.replace( /-([a-z])/, function(m, p){
+      return p.toUpperCase();
+    });
+    console.log(ret1);//backgroundColor
+
+    var ret2 = ret1.replace(/[A-Z]/, function(m){
+      return "-" + m.toLowerCase();
+    });
+    console.log(ret2);//banckground-color
+
+    
+  </script>
+
+</body>
+</html>

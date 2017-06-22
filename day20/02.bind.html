@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>bind方法</title>
+</head>
+<body>
+  <script type="text/javascript">
+    var value = 0;
+    var obj = {
+      value : 10,
+      handler: function(arg1,arg2){
+        console.log(arg1, arg2);
+        console.log(arguments);
+        console.log(this.value);
+      }
+    }
+
+    var newfun = obj.handler.bind(obj);//将obj.handler 绑定到 obj上，返回一个新函数
+    newfun(); //10 this 绑定 obj
+    console.log(newfun);
+
+
+    var newfun1 = obj.handler.bind(obj, 1,2,3);
+    newfun1(4,5,6);//参数会追加１，２，３，４，５，６
+  </script>
+</body>
+</html>

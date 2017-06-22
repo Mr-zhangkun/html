@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>error</title>
+</head>
+<body>
+  <script type="text/javascript">
+    try{
+      var a = 100, b = 0;
+      var c = a / b;//除数可以是0
+      console.log(c);//Infinity,无穷大
+
+      var ret = 2 * Number.MAX_VALUE;//最大数
+      console.log(ret);//Infinity
+
+      JSON.parse("helloworld");
+    }catch(error){
+      //instanceof　用于测试某个对象是否是有一个指定的构造函数产生
+      if(error instanceof ReferenceError){
+        console.log("ReferenceError....");
+      }else{
+        console.log(error);
+      }
+    }
+
+
+  console.log("after try catch...");
+  </script>
+
+
+</body>
+</html>

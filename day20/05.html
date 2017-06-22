@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>函数缓存</title>
+</head>
+
+<body>
+  <script type="text/javascript">
+    function even(num) {
+      if (even.ret === undefined) {
+        even.ret = {};
+      }
+      for (var key in even.ret) {
+        if (key == num) {
+          return even.ret[key];
+        }
+      }
+
+      var ret = true;
+      ret = num % 2 === 0 ? true : false;
+      return even.ret[num] = ret;
+    }
+
+
+    var start = Date.now()
+    for (var i = 0; i < 500; i++) {
+      console.log(even(i));
+    }
+    var end = Date.now();
+    var aa = (end - start);
+
+    start = Date.now()
+    for (var i = 0; i < 500; i++) {
+      console.log(even(i));
+    }
+    end = Date.now();
+    var bb = (end - start);
+
+
+    console.log(aa);
+    console.log(bb);
+  </script>
+
+</body>
+
+</html>

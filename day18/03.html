@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>原型链继承＋构建函数继承</title>
+</head>
+<body>
+  <script type="text/javascript">
+    function One(name, age){
+      this.name = name;
+      this.age = age;
+    }
+    One.prototype.getName = function(){
+      return this.name;
+    }
+
+    function Two(name, age, score){
+      One.call(this, name, age);
+      this.score = score;
+    }
+    Two.prototype = new One();
+
+
+  var aa = new One("lisi", 32);
+  var bb = new Two("zhangsan", 33, 60);
+  console.log(aa.name);
+  console.log(aa.getName());
+  console.log(bb.score);
+  console.log(bb.getName());
+  </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>惰性单例对象</title>
+</head>
+
+<body>
+  <script type="text/javascript">
+    var singleton = (function() {
+      var exist = null; //保证对象唯一性定义的变量
+      function Singleton() {
+        var _score = 10; //私有成员
+        function _getScore() {
+          return _score;
+        }
+
+        function _addScore() {
+          return _score += 1;
+        }
+
+        function _minScore() {
+          return _score -= 1;
+        }
+      return {
+        getS: function(){
+          return _getScore();
+        },
+        addS: function(){
+          return _addScore();
+        },
+        minS: function(){
+          return _minScore();
+        }
+      };
+    }
+    //为了保证使用时产生单例而封装的方法
+    return {
+      getInstance: function() {
+        if (!exist) {
+          exist = Singleton();
+        }
+        return exist;
+      }
+    }
+    })();
+
+    var one = singleton.getInstance();
+    var two = singleton.getInstance();
+    console.log(one);
+    console.log(two);
+    console.log(one === two);//true
+  </script>
+
+</body>
+
+</html>

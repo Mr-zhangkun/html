@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>js轮播图</title>
+  <style media="screen">
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    #show {
+      width: 306px;
+      height: 115px;
+      overflow: hidden;
+      margin: 100px 200px;
+      position: relative;
+    }
+
+    ul {
+      width: 1224px;
+      height: 115px;
+      list-style: none;
+      position: absolute;;
+      top: 0px;
+      left: 0px;
+    }
+
+    li {
+      width: 306px;
+      height: 115px;
+      float: left;
+    }
+
+    .btn {
+      width: 20px;
+      height: 20px;
+      background: #555;
+      margin: 5px 200px;
+      float: left;
+      line-height: 20px;
+      text-align: center;
+    }
+
+    #one {
+      position: absolute;
+      top: 140px;
+      left: 0px;
+    }
+
+    #two {
+      position: absolute;
+      top: 140px;
+      left: 286px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="show">
+    <ul>
+      <li><img src="./image/1.jpg" alt="" width="306" height="115"></li>
+      <li><img src="./image/2.jpg" alt="" width="306" height="115"></li>
+      <li><img src="./image/3.jpg" alt="" width="306" height="115"></li>
+      <li><img src="./image/4.jpg" alt="" width="306" height="115"></li>
+      <li><img src="./image/0.jpg" alt="" width="306" height="115"></li>
+    </ul>
+  </div>
+  <div class="btn" id="one">
+    <</div>
+      <div class="btn" id="two">></div>
+</body>
+<script src="./js/moveLeft.js" charset="utf-8"></script>
+<script type="text/javascript">
+  var one = document.getElementById("one");
+  var two = document.getElementById("two");
+  var ul = document.getElementsByTagName("ul")[0];
+  var num = 0;
+  one.onclick = function() {
+    num++;
+    moveLeft(ul, -306*num,10,10);
+  };
+  two.onclick = function() {
+    num--;
+    moveLeft(ul, -306*num,10,10);
+  };
+  
+
+</script>
+
+</html>

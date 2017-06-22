@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>原型链继承　prototype 继承</title>
+</head>
+<body>
+  <script>
+    function One(name, age){
+      this.name = name;
+      this.age = age;
+    };
+    One.prototype.getName = function(){
+      return this.name;
+    }
+
+    function Two(name, age, score){
+      this.name = name;
+      this.age = age;
+    }
+    Two.prototype = new One();
+    console.log(Two.prototype.constructor);//查看
+    Two.prototype.constructor = Two;//指定构造器
+
+    var aaa = new One("lisi", 34);
+    console.log(aaa.name);
+    console.log(aaa.age);
+    console.log(aaa.getName());
+
+    var bbb = new Two("zhangsan", 33, 11);
+    console.log(bbb.name);
+
+    console.log(bbb.getName());
+
+
+
+
+
+
+
+
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>cookie 的读写</title>
+</head>
+
+<body>
+
+  user:<input type="text" name="" value=""> passwd:
+  <input type="password" name="" value="">
+  <button type="button" name="button">登录</button>
+
+  <script type="text/javascript">
+    var user = document.querySelectorAll("input")[0];
+    var passwd = document.querySelectorAll("input")[1];
+    var btn = document.querySelectorAll("button")[0];
+
+    var cookieName, cookiePasswd;
+    if ((/name/.test(document.cookie)) && (/password/.test(document.cookie))){
+      var result = document.cookie.match(/name=([^=]+);[\s\S]*passwd=([^=]+);?/);
+      user.value = result[1];
+      passwd.value = result[2];
+    }
+
+    btn.onclick = function() {
+
+      var userValue = user.value;
+      var passwdValue = passwd.value;
+
+      if(!userValue || !passwdValue){
+        alert("用户名密码不能为空");
+        return;
+      }
+
+      //写入cookie;
+      document.cookie = "name=" + user.value;
+      document.cookie = "passwd=" + passwd.value;
+
+    };
+  </script>
+</body>
+
+</html>

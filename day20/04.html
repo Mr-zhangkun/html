@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>函数　currying</title>
+</head>
+
+<body>
+  <script type="text/javascript">
+    function one(arg1, arg2) {
+      return arg1 * arg2;
+    }
+
+    function curry(fun, arg) {
+      return one.bind(null, arg);
+    }
+
+    var rate1 = curry(one, 0.8);
+    console.log(rate1(100));
+    var rate2 = curry(one, 0.5);
+    console.log(rate2(200));
+  </script>
+
+</body>
+
+</html>

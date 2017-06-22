@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>window.location.hash</title>
+</head>
+<body>
+  <h1>我是源窗口</h1>
+  <div>
+    <iframe src="./location.hash.html" width="" height=""></iframe>
+  </div>
+  <script type="text/javascript">
+  window.onload = function(){
+    var h = document.querySelectorAll("h1")[0];
+    var frame = document.querySelectorAll("iframe")[0];
+
+    frame.contentWindow.document.querySelectorAll("h1")[0].style.color = "red";
+
+    var originUrl = frame.src;
+    console.log("-----------");
+    console.log(originUrl);
+    var num = 0;
+    setInterval(function(){
+      frame.contentWindow.location.href = originUrl +"#" + num++;
+      console.log(num);
+    }, 1000)
+
+    window.onhashchange = function(){
+      h.innerHTML = window.location.hash;
+    };
+  };
+
+
+  </script>
+</body>
+</html>

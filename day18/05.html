@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>综合</title>
+</head>
+<body>
+  <script type="text/javascript">
+    function One(name, age){
+      this.name = name;
+      this.age = age;
+    }
+    One.prototype.getName = function(){
+      return this.name;
+    }
+
+    function One1(name, age){
+      this.name = name + "One1";
+      this.age = age + "One1";
+      this.getAge = function(){
+        return this.age;
+      }
+    }
+
+    function One2(name, age, score){
+      One.call(this, name, age, score);
+      this.score = score;
+    }
+    One2.prototype = new One();
+
+    var aa = new One("lis", 32);
+    console.log(aa);
+    console.log(aa.getName());
+    var bb = new One1("zhang",33);
+    console.log(bb);
+    console.log(bb.getAge());
+    console.log(bb.name);
+
+    var cc = new One2("asd", 34, 60);
+    console.log(cc.score);
+    console.log(cc.getName());
+
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>window.postMessage</title>
+</head>
+
+<body>
+
+  <h1>window.open打开新的页面</h1>
+  <button type="button" name="button">点击打开新的页面</button>
+
+  <script type="text/javascript">
+    /*
+        跨域，跨窗口通信
+        window.open
+        xxx.postMessage
+        xxx.onMessage
+        */
+    var btn = document.querySelectorAll("button")[0];
+    var timer = null;
+
+    window.onmessage = function(e) {
+      console.log(e.data);
+    };
+
+    btn.onclick = function(e) {
+      clearInterval(timer);
+
+      var newWindow = window.open("./postMessage.html", "son");
+
+      newWindow.document.querySelector("h1").style.color = "red";
+
+      var num = 0;
+      timer = setInterval(function() {
+        newWindow.postMessage(num++, "*");
+      }, 1000);
+    };
+  </script>
+</body>
+
+</html>

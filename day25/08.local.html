@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>localStorage</title>
+</head>
+<body>
+  <a href="./09.localStorage">跳到09.localStorage</a>
+  <div>
+    name: <input type="text" name="name" placeholder="输入用户名"><br><br>
+    passwd: <input type="password" name="passwd" placeholder="输入密码"><br><br>
+    <button id="btn">登录</button>
+  </div>
+
+  <script type="text/javascript">
+    var user = document.querySelectorAll("input")[0];
+    var passwd = document.querySelector("input")[1];
+    var btn = document.querySelector("#btn");
+
+    if(localStorage.getItem("name")){
+      user.value = localStorage.getItem("name");
+    }else{
+      user.value = "";
+    }
+
+    if(localStorage.getItem("age")){
+      passwd.value = localStorage.getItem("passwd");
+    }else{
+      passwd.value = "";
+    }
+
+    btn.onclick = function(){
+      var nameValue = user.value;
+      var passwdValue = passwd.value;
+
+      if(!nameValue || !passwdValue){
+        alert("用户名密码不能为空！！！！！");
+        return;
+      }
+
+      localStorage.setItem("name", nameValue);
+      localStorage.setItem("passed", passwdValue);
+      
+    }
+  </script>
+</body>
+</html>

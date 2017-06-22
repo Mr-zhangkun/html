@@ -3,35 +3,60 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,  initial-scale=1.0,maximum-scale=1, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
-  <title>菜鸟物流</title>
+  <title>替换敏感词</title>
   <style media="screen">
+    .one {
+      width: 500px;
+      height: 400px;
+      margin: 100px auto;
+    }
 
+    .two {
+      width: 400px;
+      height: 200px;
+      margin: 20px auto;
+      border: 1px solid;
+    }
+
+    span {
+      color: red;
+    }
   </style>
+</head>
 
-  <body>
+<body>
+  <div class="one">
+    <div id="text" class="two" contenteditable="true"></div>
+    <button id="btn" type="button" name="button">点击</button>
+  </div>
+  <script>
+    var btn = document.getElementById("btn");
+    var text = document.getElementById("text");
+    var mg = ["d", "b", "c"];
 
-
-    <script src="./js/jquery-3.0.0.js"></script>
-    <script src="./bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript">
-      $(function() {
-        $("<table></table>").appendTo("body");
-        var i, j;
-        for (i = 1; i < 6; i++) {
-          $("<tr></tr>").appendTo("table");
-          if (i == 1) {
-            for (j = 0; j < 3; j++) {
-              $("<th></th>").appendTo($("tr").nth-child(1));
-            }
-          }
-        }
-
-
+    function rep(a, b) {
+      var aa = new RegExp("" + b.join("|") + "", "g");
+      // var aa = /(a|b|c)/g;
+      a = a.replace(aa, function(m) {
+        return "<span>" + m + "</span>";
       });
-    </script>
-  </body>
+      return a;
+    };
+
+    btn.addEventListener("click", function() {
+      var bb = text.innerHTML;
+      bb = rep(bb, mg);
+      text.innerHTML = bb;
+    })
+
+    var gg = /a|b|c/g;
+    console.log(gg);
+    var hh = new RegExp("a|b|c", "g");
+    console.log(hh);
+  </script>
+
+</body>
 
 </html>

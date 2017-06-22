@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>绘制阴影，渐变</title>
+</head>
+<body>
+  <canvas id="canvas" width="500" height="500"></canvas>
+  <script type="text/javascript">
+    var canvas = document.querySelector("#canvas");
+    canvas.style.border = "1px solid red";
+    var can = canvas.getContext("2d");
+    //阴影
+    can.beginPath();
+    can.fillStyle = "#68b83d";
+    can.shadowColor = "#7b86ea";
+    can.shadowOffsetX = 20;
+    can.shadowOffsetY = 20;
+    can.shadowBlur = 3;//阴影模糊度
+    can.rect(100,100, 100,100);
+    can.fill();
+
+    //渐变
+    can.beginPath();
+
+    var grd = can.createLinearGradient(200,0, 500, 0);
+    grd.addColorStop(0,"#7b86ea");
+    grd.addColorStop(0.3,"#263238");
+    grd.addColorStop(0.7,"#68b83d");
+    grd.addColorStop(1,"#db5326");
+    can.fillStyle = grd;
+
+    can.shadowColor = "transparent";
+    can.fillRect(200,0, 300,100);
+
+
+  </script>
+
+</body>
+</html>

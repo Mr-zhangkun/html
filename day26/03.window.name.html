@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>window.name 跨域</title>
+</head>
+<body>
+  <div id="f">
+    <iframe id="frame"src="./window.name.html" width="800" height="500"></iframe>
+  </div>
+  <script type="text/javascript">
+    var data = {
+      name:"外部页面"
+    };
+    window.name = JSON.stringify(data);
+
+
+    window.onload = function(){
+      var frame = document.querySelector("#frame");
+      frame.contentWindow.document.querySelector("h1").innerHTML = "我被改成红色";
+
+      frame.contentWindow.document.querySelector("h1").style.color = "red";
+
+      console.log(JSON.parse(frame.contentWindow.name));
+    };
+  </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JSON　操作</title>
+</head>
+<body>
+  <script type="text/javascript">
+    var one = {
+      "name":"lisi",
+      "age": 123,
+      "score": true
+    }
+
+    var a = JSON.stringify(one);
+    console.log(a);
+
+    var b = JSON.parse(a);
+    console.log(b);
+  </script>
+</body>
+</html>

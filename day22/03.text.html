@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>绘制文本,图片</title>
+</head>
+<body>
+  <img id="img" src="./201.png" alt="">
+  <canvas id="canvas" width="1000" height="800"></canvas>
+  <script type="text/javascript">
+    var canvas = document.getElementById("canvas");
+    canvas.style.border = "1px solid red";
+    var can = canvas.getContext("2d");
+    //绘制文本
+    can.fillStyle = "red";
+    can.strokeStyle = "blue";
+    can.font = "60px '宋'";
+    can.textAlign = "start";
+    can.fillText("hello world", 100, 200);
+    can.strokeText("hello world", 100, 500);
+
+    //绘制图片
+    var img = document.querySelector("#img");
+    //加载完之后绘制
+    img.onload = function(){
+      can.drawImage(img, 100, 100);//完全复制
+      can.drawImage(img, 100, 500, 200,200);//缩放
+      can.drawImage(img, 0, 0, 100, 100,500,100,100,100 );//裁剪一部分后绘制到画板
+    }
+  </script>
+
+</body>
+</html>

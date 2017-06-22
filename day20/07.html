@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>函数节流：计时器</title>
+  <style media="screen">
+    table {
+      width: 500px;
+      border: 1px solid gray;
+      border-collapse: collapse;
+      text-align: center;
+    }
+
+    th,
+    tr,
+    td {
+      border: 1px solid gray;
+    }
+  </style>
+</head>
+
+<body>
+  <button id="stu" type="button" name="button">点击</button>
+  <table id="stu">
+    <tbody>
+
+    </tbody>
+  </table>
+  <script>
+    var btn = document.getElementById("stu");
+    btn.addEventListener("click", function() {
+      alert("点击了");
+    }, false);
+
+    function out() {
+      for (var i = 0; i < 100; i++) {
+        var tr = document.createElement("tr");
+        tr.innerHTML = "<td>张三</td><td>12</td><td>89</td>";
+        var tbody = document.getElementsByTagName("tbody")[0];
+        tbody.appendChild(tr);
+      }
+      var num = 0;
+      num++;
+      if (num === 100) {
+        clearTimeout(time);
+        return;
+      }
+      var time = setTimeout(out, 1000);
+    }
+    out();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>sessionStorage</title>
+</head>
+<body>
+  <a href="./07.storage.html">跳到11.storage.html</a>
+  <button id="set">set</button>
+  <button id="remove">remove</button>
+
+  <script type="text/javascript">
+    var set = document.querySelector("#set");
+    var remove = document.querySelector("#remove");
+    //sessionStorage 存储周期：浏览器运行的时间，没有关联的页面之间无法共享数据。
+
+    set.onclick = function(){
+      //添加键值对
+      sessionStorage.setItem("name", "lis");
+      sessionStorage.setItem("age", 34);
+    }
+
+    remove.onclick = function(){
+      sessionStorage.clear();
+    }
+
+
+  </script>
+
+</body>
+</html>

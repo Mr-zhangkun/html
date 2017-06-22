@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>classList</title>
+</head>
+<body>
+  <div class="one two three"></div>
+  <script type="text/javascript">
+    var div = document.querySelector("div");
+    console.log(div.className);// one two three
+    div.setAttribute("class","one two three four");
+    //添加类
+    console.log(div.classList);
+    div.classList.add("five");
+    div.classList.remove("one");
+    div.classList.toggle("six");
+    // div.classList.toggle("six");
+  </script>
+</body>
+</html>

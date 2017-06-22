@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>折线　canvas</title>
+  <style media="screen">
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    canvas {
+      border: 1px solid red;
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id="canvas" width="500" height="500"></canvas>
+
+
+
+
+  <script>
+    var canvas = document.getElementById("canvas");
+    var can = canvas.getContext("2d");
+    can.beginPath();
+    // can.strokeStyle = "blue";
+    for (var i = 0; i < 500; i = i + 20) {
+
+      can.moveTo(0, i);
+      can.lineTo(500, i);
+      can.moveTo(i, 0);
+      can.lineTo(i, 500);
+      can.stroke();
+    }
+    // can.closePath();
+
+    can.beginPath();
+    can.strokeStyle = "blue";
+    can.lineWidth = 4;
+    can.moveTo(60, 440);
+    can.lineTo(440, 440);
+    can.lineTo(430, 430);
+    can.moveTo(440, 440);
+    can.lineTo(430, 450);
+    can.moveTo(60, 440);
+    can.lineTo(120, 260);
+    can.lineTo(180, 300);
+    can.lineTo(220, 380);
+    can.lineTo(300, 200);
+    can.lineTo(460, 220);
+    can.lineTo(320, 400);
+    can.stroke();
+    can.closePath();
+
+    can.beginPath();
+    can.strokeStyle = "red";
+    can.lineWidth = 4;
+    can.moveTo(60, 440);
+    can.lineTo(60, 60);
+    can.lineTo(50, 70);
+    can.moveTo(60, 60);
+    can.lineTo(70, 70);
+    can.stroke();
+    can.closePath();
+  </script>
+</body>
+
+</html>

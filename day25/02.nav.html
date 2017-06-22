@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>navigator</title>
+</head>
+<body>
+  <script type="text/javascript">
+    console.log(navigator.userAgent);//查看浏览器代理
+    console.log(navigator.plugins);//查看浏览器插件
+
+    console.log(navigator.userLanguage);//系统默认语言
+    console.log(navigator.platform);//操作系统平台
+    console.log(navigator.vendor);//浏览器厂商
+
+    //判断浏览器平台
+    console.log(/win/i.test(navigator.userAgent));
+  </script>
+
+</body>
+</html>

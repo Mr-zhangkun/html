@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>使用闭包创建包含私有成员的单例对象</title>
+</head>
+<body>
+  <script type="text/javascript">
+    var singleton = (function(){
+      var _score = 60;
+      function _getScore(){
+        return _score;
+      };
+      function _addScore(){
+        return _score += 1;
+      };
+      function _minScore(){
+        return _score -= 1;
+      }
+      return {
+        getS : function(){
+          return _getScore();
+        },
+        addS: function(){
+          return _addScore();
+        },
+        minS: function(){
+          return _minScore();
+        }
+      };
+    })();
+    var one = singleton;
+    var two = singleton;
+    one.addS();
+    one.addS();
+    console.log(two.getS());
+    one.minS();
+    console.log(one.getS());
+    console.log(one === two);
+    console.log(singleton.getS());
+  </script>
+</body>
+</html>

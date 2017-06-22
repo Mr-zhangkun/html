@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>鼠标放大</title>
+  <style media="screen">
+    *{
+      margin:0;
+      padding:0;
+    }
+    #small{
+      width: 350px;
+      height: 350px;
+      /*margin:100px 0 0 100px;*/
+      border:1px solid #888;
+      float: left;
+      background-image: url("./sm.jpg");
+
+    }
+    #big{
+      width: 500px;
+      height: 500px;
+      float: left;
+      /*margin-top: 100px;*/
+      border:1px solid #888;
+      overflow: hidden;
+      display:none;
+    }
+    #mask{
+      width: 250px;
+      height:250px;
+      background-color: #FEDE4F;
+      opacity:0.5;
+      position: relative;
+      top: 0px;
+      left: 0px;
+      display:none;
+      cursor:move;
+    }
+    img{
+      position: relative;
+      top: 0px;
+      left:0px;
+    }
+  </style>
+</head>
+<body>
+  <div id="small"><div id="mask"></div></div>
+  <div id="big"><img src="./big.jpg" alt=""></div>
+  <script src="./jquery-3.0.0.js" charset="utf-8"></script>
+  <script type="text/javascript">
+  $("#small").on('mousemove',function(e){
+  $("#mask").css("display", "block");
+  $("#big").css("display", "block");
+    var a = e.pageX-120;
+    var b = e.pageY-120;
+    a > 100 ? a = 100: a = a;
+    a < 0 ? a = 0: a = a;
+    b > 100 ? b = 100: b = b;
+    b < 0 ? b = 0: b = b;
+    $("img").css("top", -b*2.5);
+    $("img").css("left", -a*2.5);
+    $("#mask").css("top", b);
+    $("#mask").css("left", a);
+});
+
+$("#small").on('mouseleave',function(e){
+
+  $("#mask").css("display", "none");
+  $("#big").css("display", "none");
+});
+
+
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

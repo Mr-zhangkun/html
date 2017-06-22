@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>canvas 扇形</title>
+  <style media="screen">
+    *{
+      margin:0;
+      padding:0;
+    }
+    canvas{
+      border:1px solid red;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="canvas" width="500" height="500"></canvas>
+  <script type="text/javascript">
+    var canvas = document.getElementById("canvas");
+    can = canvas.getContext("2d");
+
+    can.beginPath();
+    can.fillStyle = "red";
+    can.moveTo(250,250);
+    can.arc(250,250,200,0,60*Math.PI/180);
+    can.fill();
+    can.closePath();
+
+    can.beginPath();
+    can.fillStyle = "blue";
+    can.moveTo(250,250);
+    can.arc(250,250,200,60*Math.PI/180,90*Math.PI/180);
+    can.fill();
+    can.closePath();
+
+
+
+    can.beginPath();
+    can.fillStyle = "yellow";
+    can.moveTo(250,250);
+    can.arc(250,250,200,90*Math.PI/180,250*Math.PI/180);
+    can.fill();
+    can.closePath();
+
+
+    can.beginPath();
+    can.fillStyle = "green";
+    can.moveTo(250,250);
+    can.arc(250,250,200,250*Math.PI/180,360*Math.PI/180);
+    can.fill();
+    can.closePath();
+
+
+
+
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>替换敏感词</title>
+  <style media="screen">
+    .one {
+      width: 500px;
+      height: 400px;
+      margin: 100px auto;
+    }
+
+    .two {
+      width: 400px;
+      height: 300px;
+      margin: 20px auto;
+      border: 1px solid;
+    }
+
+    span {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="one">
+    <div id="text" class="two" contenteditable="true"></div>
+    <button id="btn" type="button" name="button">点击</button>
+  </div>
+  <script>
+    var btn = document.getElementById("btn");
+    var text = document.getElementById("text");
+    var mg = ["d", "b", "c"];
+
+    function rep(a, b) {
+      var aa = new RegExp("(" + b.join("|") + ")", "g");//拼接使用ｎｅｗ定义。
+      a = a.replace(aa, function(m, p) {
+        return "<span>" + p + "</span>";
+      });
+      return a;
+    };
+
+    btn.addEventListener("click", function() {
+      var bb = text.innerHTML;
+      bb = rep(bb, mg);
+      text.innerHTML = bb;
+    })
+  </script>
+
+</body>
+
+</html>

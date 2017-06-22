@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>播放器</title>
+  <style media="screen">
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    div {
+      width: 500px;
+      height: 10px;
+      position: relative;
+      top: 0px;
+      left: 0px;
+      border: 1px solid;
+
+    }
+
+    #one {
+      width: 0px;
+      background: #68b83d;
+    }
+  </style>
+</head>
+
+<body>
+  <video id="video" controls>
+    <source src="./video/fun.mp4" >
+  </video>
+  <br><br>
+  <div id="one">
+    <div id="two"></div>
+  </div>
+
+  <br>
+  <button>播放</button>
+  <button>静音</button>
+  <button>加速</button>
+  <button>减速</button>
+  <button>快进</button>
+  <button>快退</button>
+  <button>全屏</button>
+
+  <script type="text/javascript">
+    var video = document.querySelector("#video");
+    var play = document.querySelectorAll("button")[0];
+    var volume = document.querySelectorAll("button")[1];
+    var speed1 = document.querySelectorAll("button")[2];
+    var speed2 = document.querySelectorAll("button")[3];
+    var speed3 = document.querySelectorAll("button")[4];
+    var speed4 = document.querySelectorAll("button")[5];
+    var scree = document.querySelectorAll("button")[6];
+    var one = document.querySelector("#one");
+    var two = document.querySelector("#two");
+
+    play.onclick = function() {
+      if (video.paused) {
+        video.play();
+        play.innerHTML = "暂停";
+
+      } else {
+        video.pause();
+        play.innerHTML = "播放";
+      }
+    };
+
+    volume.onclick = function() {
+      video.muted = !video.muted;
+      volume.innerHTML = video.muted === true ? "取消" : "静音";
+    }
+
+    speed1.onclick = function() {
+      video.playbackRate += 0.1;
+    }
+    speed2.onclick = function() {
+      video.playbackRate -= 0.1;
+    }
+    speed3.onclick = function() {
+      video.currentTime += 5;
+    }
+    speed4.onclick = function() {
+      video.currentTime -= 5;
+    }
+
+    function qxscr() {
+      if (document.cancelFullScreen) {
+        document.cancelFullScreen();
+      } else if (document.mozCancelFullScreen) {
+        document.mozCancelFullScreen();
+      } else if (document.webkitCancelFullScreen) {
+        document.webkitCancelFullScreen();
+      }
+    } 　　　　　//取消全屏
+
+    function qp(elem) {
+      if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+      } else if (elem.mozRequestFullScreen) {
+        elem.mozRequestFullScreen();
+      } else if (elem.webkitRequestFullscreen) {
+        elem.webkitRequestFullscreen();
+      }
+    }　　　　　 //全屏
+
+    document.addEventListener("keyup", function(e) {
+      var a = e.which;
+      var fullscreenElement = document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement;
+      if (a === 13 && fullscreenElement) {
+        qxscr();
+
+      } else if (a === 13) {
+        qp(video);
+      }
+    });
+
+    // video.addEventListener("progress", function() {
+      video.addEventListener("timeupdate", function() {
+        var a = this.currentTime; //s
+        var b = this.duration;
+
+        one.style.width = a / b * 500 + "px";
+        if(a === b){
+          play.innerHTML = "播放";
+        }
+      }, false);
+
+    // }, false);
+
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>
